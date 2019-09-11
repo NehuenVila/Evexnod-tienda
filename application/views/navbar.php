@@ -90,6 +90,7 @@ box-shadow: 0px 9px 15px -4px rgba(0,0,0,0.91);
 
   $(document).ready(function(){
     $("#login").hide();
+    $("#usuario").hide();
     $("#perfil").click(function(){
       if (login == false) {
         $("#login").show();
@@ -168,6 +169,23 @@ box-shadow: 0px 9px 15px -4px rgba(0,0,0,0.91);
        </div>  
   </div>
 </div>
+
+<div class="" id="usuario"> 
+
+  <div class="card" style="width:300px; position: absolute; left: 1050px; z-index: 102; margin-top: 58px; margin-left: 0px; margin-right: 0px;margin-bottom: 0px; padding: 0px; border-radius: 2px; ">
+    
+      <div style="background-color: white;" class="card-header text-center">
+        <a href="#" style="color: grey; position: relative; top: 7px; padding: 0px; margin: 0px;" ><i class="far fa-user"></i> AAAAAAAA </a>
+      </div>
+      <div style="height: 40px;" class="card-text text-center">
+        <a href="#" style="color: grey; position: relative; top: 7px; padding: 0px; margin: 0px;" ><i class="far fa-money-bill"></i> 99999 </a>
+      </div>
+       <div style="height: 40px; background-color: white;" class="card-footer text-center">         
+        <a style="color: grey; position: relative; bottom: 7px;" href="#" class=""><i class="far fa-cart-arrow-down"></i> comprar creditos </a>
+       </div>  
+  </div>
+</div>
+
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable|modal-dialog-centered modal-sm|modal-lg|modal-xl" role="document">
     <div class="modal-content">
@@ -253,8 +271,10 @@ box-shadow: 0px 9px 15px -4px rgba(0,0,0,0.91);
         </div>
       </div>
     </div>
-  </div>
+  </div> 
 </div>
+
+
 <!-- href="<?php echo base_url()?>inicio/mostrar_login"link para el inicio de session -->
 <!--  navbar para pantalla movil -->
 <!-- <nav class="navbar navbar-expand-lg  navbar-dark navPrincipal navbar-position">
