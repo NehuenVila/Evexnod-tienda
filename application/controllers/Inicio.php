@@ -27,6 +27,18 @@ class Inicio extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function evexnod2()
+	{
+		$this->load->view('header');
+		$this->load->view('navbar2');
+		$this->load->view('carousel');
+		$this->load->view('inicio2');
+		$this->load->view('expositores');
+		$this->load->view('premium');
+		$this->load->view('noticias');
+		$this->load->view('footer2');
+	}
+
 	public function mostrar_registro()
 	{
 		$this->load->view('header');
