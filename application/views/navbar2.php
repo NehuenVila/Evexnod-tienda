@@ -103,11 +103,11 @@
     $("#perfil").click(function(){
       if (login == false) {
         $("#login").show();
-        $(this).html('Perfil <i class="fas fa-chevron-up"></i><span class="sr-only">(current)</span>');
+        $(this).html('PERFIL <i class="fas fa-chevron-up"></i><span class="sr-only">(current)</span>');
         login = true;
       }else{
         $("#login").hide();
-        $(this).html('Perfil <i class="fas fa-chevron-down"></i><span class="sr-only">(current)</span>');
+        $(this).html('PERFIL <i class="fas fa-chevron-down"></i><span class="sr-only">(current)</span>');
         login = false;
       }   
     });

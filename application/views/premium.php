@@ -1,5 +1,5 @@
 <br>
-<div class="row contenedor" style="background-color: pink;height: 370px">
+<div class="row contenedor" style="background-color: transparent;height: 370px">
 
 	<div class="col-sm-12">
 		<div class="row" style="background-color: red">
