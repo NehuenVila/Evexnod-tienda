@@ -1,7 +1,7 @@
 <style>
   .navbar-position
   {
-    position: absolute;
+    /*position: absolute;*/
     z-index: 101;
     width: 100%;
   }
@@ -16,7 +16,7 @@
   }
   .dropdown-item:hover{
     /*color: background-color: rgb(59, 134, 209);*/
-    background-color: rgb(98, 167, 204); 
+    background-color: rgb(98, 167, 204);
   }
   .dropdown-menu{
     margin-top: 12px;
@@ -40,7 +40,7 @@
     background-color: rgb(59, 134, 209);
   }
   .active{
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgb(255, 255, 255);
   }
   .blanco-trans{
     color: rgba(255, 255, 255, 0.8) !important;
