@@ -1,7 +1,7 @@
 <br>
 </div>
 
-<div class="row" style="background-color: red;height: 75px;padding: 0px;margin:0px">
+<div class="row" style="background-color: rgb(59, 134, 209);height: 75px;padding: 0px;margin:0px">
 	
 	<nav class="navbar navbar-expand-lg navbar-dark navPrincipal navbar-position" style="margin:0px;padding: 0px">
 
