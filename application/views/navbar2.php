@@ -165,7 +165,7 @@
 </nav>
 <div class="" id="login">
 
-  <div class="card" style="width:300px; position: absolute; left: 1050px; z-index: 102; margin-top: 58px; margin-left: 0px; margin-right: 0px;margin-bottom: 0px; padding: 0px; border-radius: 2px; ">
+  <div class="card" style="width:300px; position: absolute; left: 1050px; z-index: 102; margin: 0px;margin-top: 4px; padding: 0px; border-radius: 2px; ">
     
       <div style="background-color: white;" class="card-header text-center">
         <a href="#" style=" width: 200px; height: 30px; border-radius: 2px; padding: 0px;margin: 0px; color: white;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Iniciar Sesion</a>
