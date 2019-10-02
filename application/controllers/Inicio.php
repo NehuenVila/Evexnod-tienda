@@ -17,14 +17,18 @@ class Inicio extends CI_Controller {
 		if($this->session->has_userdata('usuario')&&$this->session->has_userdata('password'))
 		{
 			// si la session esta abierta
-			redirect('inicio/mostrar_tienda');
+			redirect('inicio/mostrar_registro');
 			return;
 		}
 
 		$this->load->view('header');
-		$this->load->view('navbar');
-		$this->load->view('pagina_principal');
-		$this->load->view('footer');
+		$this->load->view('navbar2');
+		$this->load->view('carousel');
+		$this->load->view('inicio2');
+		$this->load->view('expositores');
+		$this->load->view('premium');
+		$this->load->view('noticias');
+		$this->load->view('footer2');
 	}
 
 	public function evexnod2()
@@ -51,14 +55,12 @@ class Inicio extends CI_Controller {
 	{
 		
 		$u_nombre = $this->input->post('r_nombre');
-		$u_apellido = $this->input->post('r_apellido');
 		$u_correo = $this->input->post('r_mail');
 		$u_clave = $this->input->post('r_clave');
 
 		$u_data = array
 		(
 			'nombre'=> $u_nombre,
-			'apellido'=> $u_apellido,
 			'correo'=> $u_correo,
 			'clave'=> $u_clave
 		);
@@ -108,6 +110,7 @@ class Inicio extends CI_Controller {
 			{
 				//si los datos son correctos
 				$this->session->set_userdata($u_data);
+				$userdata = $this->session->userdata();
 				redirect('inicio');
 			}
 			else
@@ -117,6 +120,12 @@ class Inicio extends CI_Controller {
 			}
 		}
 		echo "Mail incorrecto";		
+	}
+
+	public function cerrar_sesion()
+	{
+		$this->session->sess_destroy();
+		redirect('inicio');
 	}
 
 	public function mostrar_tienda()
