@@ -43,6 +43,14 @@ class Inicio extends CI_Controller {
 		$this->load->view('footer2');
 	}
 
+	public function juego()
+	{
+		$this->load->view('header');
+		$this->load->view('navbar2');
+		$this->load->view('game');
+		$this->load->view('footer2');
+	}
+
 	public function mostrar_registro()
 	{
 		$this->load->view('header');
