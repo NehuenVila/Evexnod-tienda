@@ -102,11 +102,11 @@
     $("#usuario").hide();
     $("#perfil").click(function(){
       if (login == false) {
-        $("#login").show();
+        $("#usuario").show();
         $(this).html('PERFIL <i class="fas fa-chevron-up"></i><span class="sr-only">(current)</span>');
         login = true;
       }else{
-        $("#login").hide();
+        $("#usuario").hide();
         $(this).html('PERFIL <i class="fas fa-chevron-down"></i><span class="sr-only">(current)</span>');
         login = false;
       }   
@@ -184,10 +184,10 @@
   <div class="card" style="width:300px; position: absolute; left: 1050px; z-index: 102; margin-top: 58px; margin-left: 0px; margin-right: 0px;margin-bottom: 0px; padding: 0px; border-radius: 2px; ">
     
       <div style="background-color: white;" class="card-header text-center">
-        <a href="#" style="color: grey; position: relative; top: 7px; padding: 0px; margin: 0px;" ><i class="far fa-user"></i> AAAAAAAA </a>
+        <a href="#" style="color: grey; position: relative; top: 7px; padding: 0px; margin: 0px;" ><i class="far fa-user"></i><?php echo $clave ?></a>
       </div>
       <div style="height: 40px;" class="card-text text-center">
-        <a href="#" style="color: grey; position: relative; top: 7px; padding: 0px; margin: 0px;" ><i class="far fa-money-bill"></i> 99999 </a>
+        <a href="#" style="color: grey; position: relative; top: 7px; padding: 0px; margin: 0px;" ><i class="far fa-money-bill"></i><?php echo $monedas ?></a>
       </div>
        <div style="height: 40px; background-color: white;" class="card-footer text-center">         
         <a style="color: grey; position: relative; bottom: 7px;" href="#" class=""><i class="far fa-cart-arrow-down"></i> comprar creditos </a>

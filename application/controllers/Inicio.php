@@ -13,6 +13,7 @@ class Inicio extends CI_Controller {
 
 	public function index()
 	{
+		$userdata = $this->session->userdata();
 		// ver si session esta iniciada
 		if($this->session->has_userdata('usuario')&&$this->session->has_userdata('password'))
 		{
@@ -21,7 +22,7 @@ class Inicio extends CI_Controller {
 			return;
 		}
 
-		$this->load->view('header');
+		$this->load->view('header', $userdata);
 		$this->load->view('navbar2');
 		$this->load->view('carousel');
 		$this->load->view('inicio2');
@@ -118,7 +119,6 @@ class Inicio extends CI_Controller {
 			{
 				//si los datos son correctos
 				$this->session->set_userdata($u_data);
-				$userdata = $this->session->userdata();
 				redirect('inicio');
 			}
 			else
