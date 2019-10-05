@@ -284,11 +284,11 @@
 </div>
 
 
-<!-- href="<?php echo base_url()?>inicio/mostrar_login"link para el inicio de session -->
+<!-- href="<?php //echo base_url()?>inicio/mostrar_login"link para el inicio de session -->
 <!--  navbar para pantalla movil -->
 <!-- <nav class="navbar navbar-expand-lg  navbar-dark navPrincipal navbar-position">
   
-  <a  class="navbar-brand" href="<?php echo base_url()?>inicio/"><img style="margin-right: 10px;" src="<?php echo base_url()?>assets/img/evexnod_logo.png" alt="">Evexnod</a>
+  <a  class="navbar-brand" href="<?php //echo base_url()?>inicio/"><img style="margin-right: 10px;" src="<?php //echo base_url()?>assets/img/evexnod_logo.png" alt="">Evexnod</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -307,7 +307,7 @@
       <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">TIENDA</a>
       <div class="dropdown-menu">
-          <a class="dropdown-item" href="<?php echo base_url()?>inicio/mostrar_tienda">juegos</a>
+          <a class="dropdown-item" href="<?php //echo base_url()?>inicio/mostrar_tienda">juegos</a>
           <a class="dropdown-item" href="#">premium</a>
           <a class="dropdown-item" href="#">especiales</a>
         </div>

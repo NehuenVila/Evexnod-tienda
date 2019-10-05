@@ -154,7 +154,7 @@ box-shadow: 0px 9px 15px -4px rgba(0,0,0,0.91);
     </ul>
   </div>
 </nav>
-<div class="" id="login">
+<!-- <div class="" id="login">
 
   <div class="card" style="width:300px; position: absolute; left: 1050px; z-index: 102; margin-top: 58px; margin-left: 0px; margin-right: 0px;margin-bottom: 0px; padding: 0px; border-radius: 2px; ">
     
@@ -168,7 +168,7 @@ box-shadow: 0px 9px 15px -4px rgba(0,0,0,0.91);
         <a style="color: grey; position: relative; bottom: 7px;" href="#" class="registro" data-toggle="modal" data-target="#registro"><i class="fal fa-user-plus"></i> Registrarse </a>
        </div>  
   </div>
-</div>
+</div> -->
 
 <div class="" id="usuario"> 
 

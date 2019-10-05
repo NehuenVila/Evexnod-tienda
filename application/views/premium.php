@@ -6,6 +6,7 @@
 		<h3 class="evexnod-navbar-font mx-auto blanco-trans" style="font-weight: bolder;font-size: 34px;text-shadow: #CCC 1px 0 10px; position: relative; ">EVEXNOD PREMIUM</h3>
 		
 	</div>
+	<br>
 
 		<div class="row" style="height: 300px;background-color: grey">
 
