@@ -33,7 +33,7 @@
 <div class="row evexnod-navbar-font" style="padding: 0px;margin:0px;margin-top: -30px">
 	<div class="col-sm-1"></div>
 	<div class="col-sm-10 text-center">
-		<p class="font-arez"style="font-size: 14px">
+		<p class="font-arez"style="font-size: 14px;margin:0px">
 		©2019 EVEXNOD STORE - TODOS LOS DERECHOS RESERVADOS</p>
 	</div>
 	<div class="col-sm-1"></div>

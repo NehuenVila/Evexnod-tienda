@@ -8,7 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Farro&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo base_url() ?>assets/fontawesome/css/all.css">
 </head>
-<body style="padding-top: 0px; background: rgb(165,165,175);
-background: linear-gradient(180deg, rgba(165,165,175,1) 0%, rgba(223,223,227,1) 100%);" >
+<body style="padding-top: 0px; background: rgb(146,154,176);
+background: linear-gradient(0deg, rgba(146,154,176,1) 0%, rgba(150,167,173,1) 100%);" >
 
 	

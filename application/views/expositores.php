@@ -32,14 +32,14 @@
 		padding: 8px;
 		transition: 0.3s;
 		}*/
-		.evexnod-expositor-font{
-			font-size: 18px;
-			letter-spacing: 2px;
-			color: black;
-			font-weight: bolder;
-			text-transform: uppercase;
-			font-family: 'Farro', sans-serif;
-		}
+	.evexnod-expositor-font{
+		font-size: 18px;
+		letter-spacing: 2px;
+		color: rgb(59, 134, 209);
+		font-weight: bolder;
+		text-transform: uppercase;
+		/*font-family: 'Farro', sans-serif;*/
+	}
 
 </style>
 
@@ -60,7 +60,7 @@
 						<img class="img-fluid"src="https://dummyimage.com/1920x1080/000/3b86d1" alt="">
 					</div>
 					<div class="row text-center" style="height: 50%;background-color: white;padding: 7px">
-						<h3 class="mx-auto evexnod-expositor-font">Titulo del juego 1</h3>
+						<h3 class="mx-auto evexnod-expositor-font" style="">Titulo del juego 1</h3>
 						<div style="height: 50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, cupiditate. Aperiam, porro, dolorem.</div>
 
 						<div class="div" style="width: 100%;height: 100%">
