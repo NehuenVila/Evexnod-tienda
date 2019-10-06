@@ -3,6 +3,8 @@ var vidaMinima=85;
 
 var turnoActual=0;
 
+var puntosDisponibles = 10;
+
 var actor_pricipal = {
 	nombre: "jugadorUno",
 	identificador: 0,
@@ -82,6 +84,8 @@ var enemigosEliminados = 0;
 
 // agregar botón para reiniciar combateautomatico3
 
+
+
 function mostrar_info()
 {
 	document.getElementById('vida1').innerHTML = actor_pricipal["vida"];
@@ -114,6 +118,7 @@ function mostrar_info()
 	$('#ataque6').html(plantilla_enemigo3["daño"]);
 	$('#critico6').html(plantilla_enemigo3["critico"]);
 	$('#curacion6').html(plantilla_enemigo3["curacion"]);
+	$('#puntosDisponibles').html('puntos disponibles: ' + puntosDisponibles);
 
 	//juntar el respawn de los 3 enemigos en una función y sacarlos de mostrar_info
 	if(plantilla_enemigo1.vida <= 0){
@@ -169,6 +174,40 @@ function mostrar_info()
 }
 mostrar_info();
 
+function mejorar_personaje(ranura, cantidad){
+	if(puntosDisponibles>0 && cantidad > 0){
+		switch (ranura){
+			case "vida":
+			actor_secundario.vida+=cantidad;
+			break;
+
+			case "daño":
+			actor_secundario.daño+=cantidad;
+			break;
+
+			case "curacion":
+			actor_secundario.daño+=cantidad;
+			break;
+		}
+		puntosDisponibles--;
+	}else if(cantidad < 0){
+		switch (ranura){
+			case "vida":
+			actor_secundario.vida+=cantidad;
+			break;
+
+			case "daño":
+			actor_secundario.daño+=cantidad;
+			break;
+
+			case "curacion":
+			actor_secundario.daño+=cantidad;
+			break;
+		}
+		puntosDisponibles++;
+	}
+	mostrar_info();
+}
 function ataque3() //editar y reemplazar por switch, ordenar!
 {
 	if(turnoActual==6){

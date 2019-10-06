@@ -32,19 +32,51 @@
 <br>
 <h4 class="text-center">Personaliza a tu guerrero</h4>
 
+<div class="row">
+	<div class="col-sm-4">
+		<select class="custom-select">
+		  <option selected>Open this select menu</option>
+		  <option value="1">One</option>
+		  <option value="2">Two</option>
+		  <option value="3">Three</option>
+		</select>
+	</div>
+	<div class="col-sm-4">
+		<select class="custom-select">
+		  <option selected>Open this select menu</option>
+		  <option value="1">One</option>
+		  <option value="2">Two</option>
+		  <option value="3">Three</option>
+		</select>
+		<p id="puntosDisponibles"></p>
+		<button type="button" id="sumarVida" onclick="mejorar_personaje('vida', 20)" class="btn btn-success">+vida</button>
+		<button type="button" id="sumarDaño" onclick="mejorar_personaje('daño', 5)" class="btn btn-success">+daño</button>
+		<button type="button" id="sumarCritico" onclick="mejorar_personaje('critico', 1)" class="btn btn-success">+critico</button>
+	</div>
+	<div class="col-sm-4">
+		<select class="custom-select">
+		  <option selected>Open this select menu</option>
+		  <option value="1">One</option>
+		  <option value="2">Two</option>
+		  <option value="3">Three</option>
+		</select>
+	</div>
+</div>
+<br>
 <div class="container-fluid fondo">
 	<div style="padding: 0px 170px 0px 170px" class="row">
 		<div  class="col-sm-4">
-			<div class="card" style="width:300px;">
-				<img style="height: 200px; width: 200px; position: relative; left: 40px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
+			<div class="card text-center" style="width:300px;">
+				<img style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">Jhon Locke</h4>
 					<div class="card-text">
-						<span id="jugador1">asd</span>
-						<span id="vida1">asd</span>
-						<span id="ataque1">asd</span>
-						<span id="critico1">asd</span>
-						<span id="curacion1">asd</span>
+						<span id="jugador1"></span>
+						<span style="float left">vida: </span><span id="vida1"></span>
+						<span style="float left">daño: </span><span id="ataque1"></span>
+						<br>
+						<span style="float right">critico: </span><span id="critico1"></span>
+						<span style="float right">posiones: </span><span id="curacion1"></span>
 					</div>    
 					<!-- <a href="#" class="btn btn-primary"></a> -->
 				</div>
@@ -52,16 +84,17 @@
 		</div>
 
 		<div class="col-sm-4">
-			<div class="card" style="width:300px;">
-				<img style="height: 200px; width: 200px;" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
+			<div class="card text-center" style="width:300px;">
+				<img style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">John Wick</h4>
 					<div class="card-text">
-						<span id="jugador2">asd</span>
-						<span id="vida2">asd</span>
-						<span id="ataque2">asd</span>
-						<span id="critico2">asd</span>
-						<span id="curacion2">asd</span>
+						<span id="jugador2"></span>
+						<span style="float left">vida: </span><span id="vida2"></span>
+						<span style="float left">daño: </span><span id="ataque2"></span>
+						<br>
+						<span style="float right">critico: </span><span id="critico2"></span>
+						<span style="float right">posiones: </span><span id="curacion2"></span>
 					</div>    
 					<!-- <a href="#" class="btn btn-primary"></a> -->
 				</div>
@@ -69,16 +102,17 @@
 		</div>
 
 		<div class="col-sm-4">
-			<div class="card" style="width:300px;">
-				<img style="height: 200px; width: 200px;" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
+			<div class="card text-center" style="width:300px;">
+				<img style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">John Reese</h4>
 					<div class="card-text">
-						<span id="jugador3">asd</span>
-						<span id="vida3">asd</span>
-						<span id="ataque3">asd</span>
-						<span id="critico3">asd</span>
-						<span id="curacion3">asd</span>
+						<span id="jugador3"></span>
+						<span style="float left">vida: </span><span id="vida3"></span>
+						<span style="float left">daño: </span><span id="ataque3"></span>
+						<br>
+						<span style="float right">critico: </span><span id="critico3"></span>
+						<span style="float right">posiones: </span><span id="curacion3"></span>
 					</div>    
 					<!-- <a href="#" class="btn btn-primary"></a> -->
 				</div>
@@ -89,16 +123,17 @@
 	<br>
 	<div style="padding: 0px 170px 0px 170px" class="row">
 		<div  class="col-sm-4">
-			<div class="card" style="width:300px;">
-				<img style="height: 200px; width: 200px;" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
+			<div class="card text-center" style="width:300px;">
+				<img style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">Jhon Locke</h4>
 					<div style="" class="card-text">
 						<span id="jugador4"></span>
-						<span id="vida4"></span>
-						<span id="ataque4">de daño</span>
-						<span id="critico4">asd</span>
-						<span id="curacion4">asd</span>
+						<span style="float left">vida: </span><span id="vida4"></span>
+						<span style="float left">daño: </span><span id="ataque4"></span>
+						<br>
+						<span style="float right">critico: </span><span id="critico4"></span>
+						<span style="float right">posiones: </span><span id="curacion4"></span>
 					</div>    
 					<!-- <a href="#" class="btn btn-primary"></a> -->
 				</div>
@@ -106,16 +141,17 @@
 		</div>
 
 		<div class="col-sm-4">
-			<div class="card" style="width:300px;">
-				<img style="height: 200px; width: 200px;" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
+			<div class="card text-center" style="width:300px;">
+				<img style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">John Wick</h4>
 					<div class="card-text">
-						<span id="jugador5">asd</span>
-						<span id="vida5">asd</span>
-						<span id="ataque5">asd</span>
-						<span id="critico5">asd</span>
-						<span id="curacion5">asd</span>
+						<span id="jugador5"></span>
+						<span style="float left">vida: </span><span id="vida5"></span>
+						<span style="float left">daño: </span><span id="ataque5"></span>
+						<br>
+						<span style="float right">critico: </span><span id="critico5"></span>
+						<span style="float right">posiones: </span><span id="curacion5"></span>
 					</div>    
 					<!-- <a href="#" class="btn btn-primary"></a> -->
 				</div>
@@ -123,16 +159,17 @@
 		</div>
 
 		<div class="col-sm-4">
-			<div class="card" style="width:300px;">
-				<img style="height: 200px; width: 200px;" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
+			<div class="card text-center" style="width:300px;">
+				<img style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">John Reese</h4>
 					<div class="card-text">
-						<span>nombre: </span><span id="jugador6"></span>
-						<span id="vida6"></span>
-						<span id="ataque6"></span>
-						<span id="critico6">asd</span>
-						<span id="curacion6">asd</span>
+						<span id="jugador6"></span>
+						<span style="float left">vida: </span><span id="vida6"></span>
+						<span style="float left">daño: </span><span id="ataque6"></span>
+						<br>
+						<span style="float right">critico: </span><span id="critico6"></span>
+						<span style="float right">posiones: </span><span id="curacion6"></span>
 					</div>    
 					<!-- <a href="#" class="btn btn-primary"></a> -->
 				</div>
@@ -185,7 +222,7 @@
 </div> -->
 
 <div class="row"style="height: 200px;padding: 30px; width: 50%; position: relative;left: 350px;">
-	<div class="degradadoborde"style="height: 100px; width: 100%; background-color: rgba(75,75,75,0.2); float: left;color:lime" id="ganador"></div>
+	<div class="degradadoborde"style="height: 100px; width: 100%; background-color: rgba(75,75,75,0.2); float: left;color:red" id="ganador"></div>
 	<div class="mx-auto">
 		<button style="height: 34px;margin-bottom: 10px" onclick="inicio_combate_automatico3()"type="button" class="btn btn-evexnod-outline">Combate automático</button>
 		<button style="height: 34px;margin-bottom: 10px" onclick="pausar()"type="button" class="btn btn-evexnod-outline">Pausar</button>
