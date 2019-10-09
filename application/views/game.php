@@ -1,6 +1,6 @@
 <style>
 	.fondo{
-		background-image: url('<?php echo base_url()?>assets/img/ruines3.png');
+		background-image: url('<?php echo base_url().'assets/img/'.rand(1, 6).'.jpg'?>');
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
@@ -29,37 +29,42 @@
 <br>
 
 <h1 class="text-center">Java Script Game</h1>
-<br>
-<h4 class="text-center">Personaliza a tu guerrero</h4>
+<div style="width: 100%" class="text-center">
+<button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#puntajes">Puntajes Altos</button>	
+</div>
+<h4 class="text-center">Personaliza a tus guerreros</h4>
 
 <div class="row">
 	<div class="col-sm-4">
-		<select class="custom-select">
-		  <option selected>Open this select menu</option>
-		  <option value="1">One</option>
-		  <option value="2">Two</option>
-		  <option value="3">Three</option>
-		</select>
+	<!-- <select id="actor1" class="custom-select">
+		  <option selected>Seleccione la clase</option>
+		  <option value="caballero">Caballero</option>
+		  <option value="ginete">Ginete</option>
+		  <option value="gladiador">Gladiador</option>
+		</select> -->
 	</div>
-	<div class="col-sm-4">
-		<select class="custom-select">
-		  <option selected>Open this select menu</option>
-		  <option value="1">One</option>
-		  <option value="2">Two</option>
-		  <option value="3">Three</option>
-		</select>
+	<div class="col-sm-4 text-center">
+		<!-- <select id="actor2" class="custom-select">
+		  <option selected>Seleccione la clase</option>
+		  <option value="caballero">Caballero</option>
+		  <option value="ginete">Ginete</option>
+		  <option value="gladiador">Gladiador</option>
+		</select> -->
+		<div style="width: 100%" class="text-center">
+			<button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#clases">Selecciona la clase de tus guerreros</button>	
+		</div>
 		<p id="puntosDisponibles"></p>
 		<button type="button" id="sumarVida" onclick="mejorar_personaje('vida', 20)" class="btn btn-success">+vida</button>
 		<button type="button" id="sumarDaño" onclick="mejorar_personaje('daño', 5)" class="btn btn-success">+daño</button>
 		<button type="button" id="sumarCritico" onclick="mejorar_personaje('critico', 1)" class="btn btn-success">+critico</button>
 	</div>
 	<div class="col-sm-4">
-		<select class="custom-select">
-		  <option selected>Open this select menu</option>
-		  <option value="1">One</option>
-		  <option value="2">Two</option>
-		  <option value="3">Three</option>
-		</select>
+		<!-- <select id="actor3" class="custom-select">
+		  <option selected>Seleccione la clase</option>
+		  <option value="caballero">Caballero</option>
+		  <option value="ginete">Ginete</option>
+		  <option value="gladiador">Gladiador</option>
+		</select> -->
 	</div>
 </div>
 <br>
@@ -67,7 +72,7 @@
 	<div style="padding: 0px 170px 0px 170px" class="row">
 		<div  class="col-sm-4">
 			<div class="card text-center" style="width:300px;">
-				<img style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
+				<img id="img1" style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">Jhon Locke</h4>
 					<div class="card-text">
@@ -85,7 +90,7 @@
 
 		<div class="col-sm-4">
 			<div class="card text-center" style="width:300px;">
-				<img style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
+				<img id="img2" style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">John Wick</h4>
 					<div class="card-text">
@@ -103,7 +108,7 @@
 
 		<div class="col-sm-4">
 			<div class="card text-center" style="width:300px;">
-				<img style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
+				<img id="img3" style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">John Reese</h4>
 					<div class="card-text">
@@ -225,12 +230,85 @@
 	<div class="degradadoborde"style="height: 100px; width: 100%; background-color: rgba(75,75,75,0.2); float: left;color:red" id="ganador"></div>
 	<div class="mx-auto">
 		<button style="height: 34px;margin-bottom: 10px" onclick="inicio_combate_automatico3()"type="button" class="btn btn-evexnod-outline">Combate automático</button>
-		<button style="height: 34px;margin-bottom: 10px" onclick="pausar()"type="button" class="btn btn-evexnod-outline">Pausar</button>
-		<button style="height: 34px;margin-bottom: 10px" onclick="ataque3()"type="button" class="btn btn-evexnod-outline">Siguiente turno</button>
+		<!-- <button style="height: 34px;margin-bottom: 10px" onclick="pausar()"type="button" class="btn btn-evexnod-outline">Pausar</button> -->
+		<!-- <button style="height: 34px;margin-bottom: 10px" onclick="ataque3()"type="button" class="btn btn-evexnod-outline">Siguiente turno</button> -->
 
 	</div>
 	
 </div>
+
+
+<div class="modal fade" id="puntajes" tabindex="-1" role="dialog" aria-labelledby="puntajes" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-sm|modal-lg|modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="puntajes">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#clases">
+  Launch demo modal
+</button>
+ -->
+<!-- Modal -->
+<div class="modal fade" id="clases" tabindex="-1" role="dialog" aria-labelledby="clases" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable|modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="clases">Modal title</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div  class="modal-body">
+				<div  class="row">
+					<div class="col-sm-4">
+						<select id="actor1" class="custom-select">
+							<option selected>Seleccione la clase</option>
+							<option value="caballero">Caballero</option>
+							<option value="ginete">Ginete</option>
+							<option value="gladiador">Gladiador</option>
+						</select>
+					</div>
+					<div  class="col-sm-4 text-center">
+						<select id="actor2" class="custom-select">
+							<option selected>Seleccione la clase</option>
+							<option value="caballero">Caballero</option>
+							<option value="ginete">Ginete</option>
+							<option value="gladiador">Gladiador</option>
+						</select>
+					</div>
+						<div  class="col-sm-4">
+							<select  id="actor3" class="custom-select">
+								<option selected>Seleccione la clase</option>
+								<option value="caballero">Caballero</option>
+								<option value="ginete">Ginete</option>
+								<option value="gladiador">Gladiador</option>
+							</select>
+						</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
 
 
 

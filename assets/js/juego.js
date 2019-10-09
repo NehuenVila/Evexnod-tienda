@@ -174,6 +174,108 @@ function mostrar_info()
 }
 mostrar_info();
 
+function clase_personaje(clase, actor) {
+
+}
+$('#actor1').change(function() {
+	var clase = $(this).val();
+	switch (clase){
+		case "caballero":
+		$("#img1").attr({
+			src: 'https://static.thenounproject.com/png/30912-200.png'
+		});
+		actor_pricipal.vida = 160;
+		actor_pricipal.daño = 3;
+		actor_pricipal.critico = 2;
+		break;
+
+		case "ginete":
+		$("#img1").attr({
+			src: 'https://static.thenounproject.com/png/56772-200.png'
+		});
+		actor_pricipal.critico = 5;
+		actor_pricipal.vida = 120;
+		actor_pricipal.daño = 3;
+		break;
+
+		case "gladiador":
+		$("#img1").attr({
+			src: 'https://static.thenounproject.com/png/1048864-200.png'
+		});
+		actor_pricipal.daño = 8;
+		actor_pricipal.critico = 2;
+		actor_pricipal.vida = 120;
+		break;
+	}
+	mostrar_info();	
+});
+
+$('#actor2').change(function() {
+	var clase = $(this).val();
+	switch (clase){
+		case "caballero":
+		$("#img2").attr({
+			src: 'https://static.thenounproject.com/png/30912-200.png'
+		});
+		actor_secundario.vida = 160;
+		actor_secundario.daño = 3;
+		actor_secundario.critico = 1;
+		break;
+
+		case "ginete":
+		$("#img2").attr({
+			src: 'https://static.thenounproject.com/png/56772-200.png'
+		});
+		actor_secundario.critico = 5;
+		actor_secundario.vida = 120;
+		actor_secundario.daño = 3;
+		break;
+
+		case "gladiador":
+		$("#img2").attr({
+			src: 'https://static.thenounproject.com/png/1048864-200.png'
+		});
+		actor_secundario.daño = 8;
+		actor_secundario.critico = 1;
+		actor_secundario.vida = 120;
+		break;
+	}
+	mostrar_info();	
+});
+
+$('#actor3').change(function() {
+	var clase = $(this).val();
+	switch (clase){
+		case "caballero":
+		$("#img3").attr({
+			src: 'https://static.thenounproject.com/png/30912-200.png'
+		});
+		actor_terciario.vida = 160;
+		actor_terciario.daño = 3;
+		actor_terciario.critico = 2;
+		break;
+
+		case "ginete":
+		$("#img3").attr({
+			src: 'https://static.thenounproject.com/png/56772-200.png'
+		});
+		actor_terciario.critico = 5;
+		actor_terciario.vida = 120;
+		actor_terciario.daño = 3;
+		break;
+
+		case "gladiador":
+		$("#img3").attr({
+			src: 'https://static.thenounproject.com/png/1048864-200.png'
+		});
+		actor_terciario.daño = 8;
+		actor_terciario.critico = 2;
+		actor_terciario.vida = 120;
+		break;
+	}
+	mostrar_info();	
+});
+
 function mejorar_personaje(ranura, cantidad){
 	if(puntosDisponibles>0 && cantidad > 0){
 		switch (ranura){
@@ -185,8 +287,8 @@ function mejorar_personaje(ranura, cantidad){
 			actor_secundario.daño+=cantidad;
 			break;
 
-			case "curacion":
-			actor_secundario.daño+=cantidad;
+			case "critico":
+			actor_secundario.critico+=cantidad;
 			break;
 		}
 		puntosDisponibles--;
@@ -200,14 +302,25 @@ function mejorar_personaje(ranura, cantidad){
 			actor_secundario.daño+=cantidad;
 			break;
 
-			case "curacion":
-			actor_secundario.daño+=cantidad;
+			case "critico":
+			actor_secundario.critico+=cantidad;
 			break;
 		}
 		puntosDisponibles++;
 	}
 	mostrar_info();
 }
+
+// function cambiarFondo() {
+// 	var fondo1 = "https://www.lostnoob.com/images/darkest-dungeon/donjons/ruines.jpg";
+// 	var fondo2 = "https://img4.goodfon.com/wallpaper/nbig/e/ee/darkest-dungeon-death-candles-swords-ruins-altar.jpg";
+// 	var fondo3 = "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/7434629/6e0b6b578a86809494e65d36f76308c57a54052d.png";
+// 	var fondo4 = "https://i.pinimg.com/originals/19/9b/8f/199b8fa0ea9809ef42a53074fb1e9504.png";
+// 	var fondo5 = "https://steamuserimages-a.akamaihd.net/ugc/845964507751453442/497C510E20305B51E1E733E2F13CD1F54FAF302A/";
+// 	var resultado = Math.random(fondo1, fondo2, fondo2, fondo3, fondo4, fondo5);
+// 	$(".fondo").css("background-image", "url('resu')");
+// }
+
 function ataque3() //editar y reemplazar por switch, ordenar!
 {
 	if(turnoActual==6){
@@ -341,7 +454,7 @@ function sacar_vida3(atacante, defensor)
 var pausa = false;
 
 function inicio_combate_automatico3(){
-
+	
 	var combate3v3 = setInterval(function arez(){ ataque3();
 		if(actor_pricipal.vida<=0 && actor_secundario.vida<=0&&actor_terciario.vida<=0){
 			console.log("DERROTA!");
