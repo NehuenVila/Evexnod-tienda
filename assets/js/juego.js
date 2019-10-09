@@ -11,7 +11,7 @@ var actor_pricipal = {
 	vida: 120,
 	curacion: 3,
 	daño: 3,
-	critico: 1,
+	critico: 2,
 	equipo: 1,
 	orden: 0,
 	turnoP: 0
@@ -32,10 +32,10 @@ var actor_secundario = {
 var actor_terciario = {
 	nombre: "jugadorTres",
 	identificador: 2,
-	vida: 130,
+	vida: 120,
 	curacion: 1,
 	daño: 3,
-	critico: 1,
+	critico: 2,
 	equipo: 1,
 	orden: 4,
 	turnoP: 2
@@ -81,6 +81,7 @@ var plantilla_enemigo3 = {
 var turno = 0;
 var rondasSuperadas = 0;
 var enemigosEliminados = 0;
+var imgActual = 0
 
 // agregar botón para reiniciar combateautomatico3
 
@@ -122,9 +123,11 @@ function mostrar_info()
 
 	//juntar el respawn de los 3 enemigos en una función y sacarlos de mostrar_info
 	if(plantilla_enemigo1.vida <= 0){
+		cambiarImg("imgEnemigo1")
+		imgActual++;
 		plantilla_enemigo1.vida = Math.floor((Math.random() * (vidaMaxima - vidaMinima))+vidaMinima);
 		plantilla_enemigo1.curacion = Math.floor((Math.random() * (4 - 1))+1);
-		plantilla_enemigo1.daño = Math.floor((Math.random() * (4 - 2))+2);
+		plantilla_enemigo1.daño = Math.floor((Math.random() * (4 - 1))+1);
 		plantilla_enemigo1.critico = Math.floor((Math.random() * (2 - 1))+1);
 		console.log("se generó un enemigo nuevo usando la plantilla 1");
 		document.getElementById('ganador').innerHTML = "Nuevo enemigo generado!";
@@ -132,9 +135,11 @@ function mostrar_info()
 	}
 
 	if(plantilla_enemigo2.vida <= 0){
+		cambiarImg("imgEnemigo2")
+		imgActual++;
 		plantilla_enemigo2.vida = Math.floor((Math.random() * (vidaMaxima - vidaMinima))+vidaMinima),
 		plantilla_enemigo2.curacion = Math.floor((Math.random() * (4 - 1))+1);
-		plantilla_enemigo2.daño = Math.floor((Math.random() * (4 - 2))+2);
+		plantilla_enemigo2.daño = Math.floor((Math.random() * (4 - 1))+1);
 		plantilla_enemigo2.critico = Math.floor((Math.random() * (2 - 1))+1);
 		console.log("se generó un enemigo nuevo usando la plantilla 2");
 		document.getElementById('ganador').innerHTML = "Nuevo enemigo generado!";
@@ -142,9 +147,11 @@ function mostrar_info()
 	}
 
 	if(plantilla_enemigo3.vida <= 0){
+		cambiarImg("imgEnemigo3")
+		imgActual++;
 		plantilla_enemigo3.vida = Math.floor((Math.random() * (vidaMaxima - vidaMinima))+vidaMinima),
 		plantilla_enemigo3.curacion = Math.floor((Math.random() * (4 - 1))+1);
-		plantilla_enemigo3.daño = Math.floor((Math.random() * (4 - 2))+2);
+		plantilla_enemigo3.daño = Math.floor((Math.random() * (4 - 1))+1);
 		plantilla_enemigo3.critico = Math.floor((Math.random() * (2 - 1))+1);
 		console.log("se generó un enemigo nuevo usando la plantilla 3");
 		document.getElementById('ganador').innerHTML = "Nuevo enemigo generado!";
@@ -173,6 +180,38 @@ function mostrar_info()
 	//color de los iconos cambian al hacer o recibir daño
 }
 mostrar_info();
+
+function cambiarImg(id){
+
+  if (imgActual > 4)
+		imgActual = 0;
+
+	switch (imgActual){
+		case 1:
+		$("#"+id).attr({
+			src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeMWXl19nt5zK_h01fPoIVGjXJqG39or8d06bPWDy5QmBuOsmp'
+		});
+		break;
+
+		case 2:
+		$("#"+id).attr({
+			src: 'https://static.thenounproject.com/png/24990-200.png'
+		});
+		break;
+
+		case 3:
+		$("#"+id).attr({
+			src: 'https://free-icon.org/highresolution/300-icon-free.png'
+		});
+		break;
+
+		case 4:
+		$("#"+id).attr({
+			src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyM_JqulrSdauV35y7HFwybXAzcSS14hYBs5CnCLI09LMbA8qF'
+		});
+		break;
+	}
+}
 
 function clase_personaje(clase, actor) {
 
@@ -311,17 +350,7 @@ function mejorar_personaje(ranura, cantidad){
 	mostrar_info();
 }
 
-// function cambiarFondo() {
-// 	var fondo1 = "https://www.lostnoob.com/images/darkest-dungeon/donjons/ruines.jpg";
-// 	var fondo2 = "https://img4.goodfon.com/wallpaper/nbig/e/ee/darkest-dungeon-death-candles-swords-ruins-altar.jpg";
-// 	var fondo3 = "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/clans/7434629/6e0b6b578a86809494e65d36f76308c57a54052d.png";
-// 	var fondo4 = "https://i.pinimg.com/originals/19/9b/8f/199b8fa0ea9809ef42a53074fb1e9504.png";
-// 	var fondo5 = "https://steamuserimages-a.akamaihd.net/ugc/845964507751453442/497C510E20305B51E1E733E2F13CD1F54FAF302A/";
-// 	var resultado = Math.random(fondo1, fondo2, fondo2, fondo3, fondo4, fondo5);
-// 	$(".fondo").css("background-image", "url('resu')");
-// }
-
-function ataque3() //editar y reemplazar por switch, ordenar!
+function ataque3() 
 {
 	if(turnoActual==6){
 		turnoActual = 0;
@@ -342,13 +371,6 @@ function ataque3() //editar y reemplazar por switch, ordenar!
 			turnoActual++;
 		}
 
-		// if (turnoActual == 0){
-		// 	atacante = actor_pricipal;
-		// } else if (turnoActual == 2){
-		// 	atacante = actor_secundario;
-		// } else {
-		// 	atacante = actor_terciario;
-		// }
 
 		// Math.floor(Math.random() * (10 - 1)) + 1 <5 &&
 		if(atacante != null && atacante.vida>0 && atacante.vida <= 40 &&  atacante.curacion >= 1)
@@ -422,14 +444,6 @@ function ataque3() //editar y reemplazar por switch, ordenar!
 				console.log("turno: "+turnoActual+" "+atacante.nombre+" dañó a "+actor_secundario.nombre);
 			}
 		}
-
-		// }else if(enemigo1 == 2){
-		// 	sacar_vida3(atacante,actor_secundario);
-		// 	console.log("turno: "+turnoActual+" "+atacante.nombre+" dañó a "+actor_secundario.nombre);
-		// }else if(enemigo1 == 3){
-		// 	sacar_vida3(atacante,actor_terciario);
-		// 	console.log("turno: "+turnoActual+" "+atacante.nombre+" dañó a "+actor_terciario.nombre);
-		// }
 		mostrar_info();
 		turnoActual++;
 	}
@@ -437,7 +451,7 @@ function ataque3() //editar y reemplazar por switch, ordenar!
 
 function curarse3(plantilla){
 		plantilla.vida+=20;
-		document.getElementById(plantilla.nombre).innerHTML = '<i style="color=green"class="fas fa-heartbeat"></i> '+"+20";
+		// document.getElementById(plantilla.nombre).innerHTML = '<i style="color=green"class="fas fa-heartbeat"></i> '+"+20";
 		plantilla.curacion--;
 }
 
@@ -446,7 +460,7 @@ function sacar_vida3(atacante, defensor)
 	if(atacante != null && defensor["vida"]>0){
 		var daño = atacante["daño"]*atacante["critico"]+tirarDado();
 		defensor["vida"] -= daño;
-		document.getElementById(defensor.nombre).innerHTML = '<i style="color=green"class="fas fa-heartbeat"></i> '+"-"+daño;
+		// document.getElementById(defensor.nombre).innerHTML = '<i style="color=green"class="fas fa-heartbeat"></i> '+"-"+daño;
 		mostrar_info();
 	}
 }
@@ -454,7 +468,12 @@ function sacar_vida3(atacante, defensor)
 var pausa = false;
 
 function inicio_combate_automatico3(){
-	
+	$("#btn-clases").attr({
+		disabled: true
+	});
+	$("#sumarVida, #sumarDaño, #sumarCritico").attr({
+		disabled: true
+	});
 	var combate3v3 = setInterval(function arez(){ ataque3();
 		if(actor_pricipal.vida<=0 && actor_secundario.vida<=0&&actor_terciario.vida<=0){
 			console.log("DERROTA!");
