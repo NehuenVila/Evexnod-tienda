@@ -24,6 +24,13 @@
 		position: absolute;
 	}
 
+	.transparente{
+		background-color: transparent !important;
+	}
+	.fila{
+		background-color: rgba(255, 255, 255, 0.3);
+	}
+
 </style>
 
 <br>
@@ -71,7 +78,7 @@
 <div class="container-fluid fondo">
 	<div style="padding: 0px 170px 0px 170px" class="row">
 		<div  class="col-sm-4">
-			<div class="card text-center" style="width:300px;">
+			<div class="card text-center " style="width:300px;">
 				<img id="img1" style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">Jhon Locke</h4>
@@ -89,7 +96,7 @@
 		</div>
 
 		<div class="col-sm-4">
-			<div class="card text-center" style="width:300px;">
+			<div class="card text-center " style="width:300px;">
 				<img id="img2" style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">John Wick</h4>
@@ -107,7 +114,7 @@
 		</div>
 
 		<div class="col-sm-4">
-			<div class="card text-center" style="width:300px;">
+			<div class="card text-center " style="width:300px;">
 				<img id="img3" style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="https://static.thenounproject.com/png/30912-200.png" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">John Reese</h4>
@@ -128,7 +135,7 @@
 	<br>
 	<div style="padding: 0px 170px 0px 170px" class="row">
 		<div  class="col-sm-4">
-			<div class="card text-center" style="width:300px;">
+			<div class="card text-center " style="width:300px;">
 				<img id="imgEnemigo1" style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="<?php echo base_url().'assets/img/mobs/'.rand(1, 4).'.png'?>" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">Enemigo</h4>
@@ -146,7 +153,7 @@
 		</div>
 
 		<div class="col-sm-4">
-			<div class="card text-center" style="width:300px;">
+			<div class="card text-center " style="width:300px;">
 				<img id="imgEnemigo2" style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="<?php echo base_url().'assets/img/mobs/'.rand(1, 4).'.png'?>" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">Enemigo</h4>
@@ -164,7 +171,7 @@
 		</div>
 
 		<div class="col-sm-4">
-			<div class="card text-center" style="width:300px;">
+			<div class="card text-center " style="width:300px;">
 				<img id="imgEnemigo3" style="height: 200px; width: 200px; position: relative; left: 60px" class="card-img-top" src="<?php echo base_url().'assets/img/mobs/'.rand(1, 4).'.png'?>" alt="Card image">
 				<div class="card-body">
 					<h4 class="card-title">Enemigo</h4>
@@ -229,7 +236,7 @@
 <div class="row"style="height: 200px;padding: 30px; width: 50%; position: relative;left: 350px;">
 	<div class="degradadoborde text-center"style="height: 100px; width: 100%; background-color: rgba(75,75,75,0.2); float: left;color:red; font-size: 20px;" id="ganador"></div>
 	<div class="mx-auto">
-		<button style="height: 34px;margin-bottom: 10px" onclick="inicio_combate_automatico3()"type="button" class="btn btn-evexnod-outline">Combate automático</button>
+		<button style="height: 34px;margin-bottom: 10px" onclick="inicio_combate_automatico3()"type="button" class="btn btn-outline-dark">Empezar combate</button>
 		<!-- <button style="height: 34px;margin-bottom: 10px" onclick="pausar()"type="button" class="btn btn-evexnod-outline">Pausar</button> -->
 		<!-- <button style="height: 34px;margin-bottom: 10px" onclick="ataque3()"type="button" class="btn btn-evexnod-outline">Siguiente turno</button> -->
 

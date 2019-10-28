@@ -130,7 +130,7 @@ function mostrar_info()
 		plantilla_enemigo1.daño = Math.floor((Math.random() * (4 - 1))+1);
 		plantilla_enemigo1.critico = Math.floor((Math.random() * (2 - 1))+1);
 		console.log("se generó un enemigo nuevo usando la plantilla 1");
-		document.getElementById('ganador').innerHTML = "Nuevo enemigo generado!";
+		document.getElementById('ganador').innerHTML = "Nuevo Monstruo generado";
 		enemigosEliminados++;
 	}
 
@@ -142,7 +142,7 @@ function mostrar_info()
 		plantilla_enemigo2.daño = Math.floor((Math.random() * (4 - 1))+1);
 		plantilla_enemigo2.critico = Math.floor((Math.random() * (2 - 1))+1);
 		console.log("se generó un enemigo nuevo usando la plantilla 2");
-		document.getElementById('ganador').innerHTML = "Nuevo enemigo generado!";
+		document.getElementById('ganador').innerHTML = "Nuevo Monstruo generado";
 		enemigosEliminados++;
 	}
 
@@ -154,25 +154,25 @@ function mostrar_info()
 		plantilla_enemigo3.daño = Math.floor((Math.random() * (4 - 1))+1);
 		plantilla_enemigo3.critico = Math.floor((Math.random() * (2 - 1))+1);
 		console.log("se generó un enemigo nuevo usando la plantilla 3");
-		document.getElementById('ganador').innerHTML = "Nuevo enemigo generado!";
+		document.getElementById('ganador').innerHTML = "Nuevo Monstruo generado";
 		enemigosEliminados++;
 	}
 
 	//juntar la correción de la vida de los jugadores en una función (y la informacion)
 	if(actor_pricipal.vida<0){
 		actor_pricipal.vida = 0;
-		document.getElementById('ganador').innerHTML = "Jugador 1 eliminado.";
+		document.getElementById('ganador').innerHTML = "Aliado 1 eliminado";
 	}
 
 
 	if(actor_secundario.vida<0){
 		actor_secundario.vida = 0;
-		document.getElementById('ganador').innerHTML = "Jugador 2 eliminado.";
+		document.getElementById('ganador').innerHTML = "Personaje principal eliminado";
 	}
 
 	if(actor_terciario.vida<0){
 		actor_terciario.vida = 0;
-		document.getElementById('ganador').innerHTML = "Jugador 3 eliminado.";
+		document.getElementById('ganador').innerHTML = "Aliado 2 eliminado.";
 	}
 
 	// $(".vidaJ1").css("height", actor_pricipal["vida"]*2);
@@ -331,21 +331,6 @@ function mejorar_personaje(ranura, cantidad){
 			break;
 		}
 		puntosDisponibles--;
-	}else if(cantidad < 0){
-		switch (ranura){
-			case "vida":
-			actor_secundario.vida+=cantidad;
-			break;
-
-			case "daño":
-			actor_secundario.daño+=cantidad;
-			break;
-
-			case "critico":
-			actor_secundario.critico+=cantidad;
-			break;
-		}
-		puntosDisponibles++;
 	}
 	mostrar_info();
 }
@@ -476,11 +461,11 @@ function inicio_combate_automatico3(){
 	});
 	var combate3v3 = setInterval(function arez(){ ataque3();
 		if(actor_pricipal.vida<=0 && actor_secundario.vida<=0&&actor_terciario.vida<=0){
-			console.log("DERROTA!");
+			console.log("DERROTA");
 			console.log("Rondas completadas: "+rondasSuperadas);
 			console.log("Enemigos eliminados: "+enemigosEliminados+" ("+enemigosEliminados*3+")");
 			console.log("Puntos conseguidos "+rondasSuperadas*enemigosEliminados*3);
-			document.getElementById('ganador').innerHTML = "¡Derrota! Rondas superadas: "+rondasSuperadas+" ||| Enemigos eliminados: "+enemigosEliminados+" ||| Puntos conseguidos "+rondasSuperadas*enemigosEliminados*3;
+			document.getElementById('ganador').innerHTML = "DERROTA <br> Rondas superadas: "+rondasSuperadas+" <br>\nPuntos conseguidos "+rondasSuperadas*enemigosEliminados*5;
 			clearInterval(combate3v3);
 		}
 		if(pausa){
