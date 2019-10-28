@@ -44,6 +44,20 @@ class Inicio extends CI_Controller {
 		$this->load->view('footer2');
 	}
 
+	public function tienda1()
+	{
+		$this->load->view('header');
+		$this->load->view('navbar2');
+		$this->load->view('store_carousel');
+		$this->load->view('store_juego');
+		$this->load->view('inicio2');
+		$this->load->view('store_header');
+		// $this->load->view('store_final');
+		$this->load->view('store_desc');
+
+		$this->load->view('footer2');
+	}
+
 	public function juego()
 	{
 		$this->load->view('header');

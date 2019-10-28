@@ -91,6 +91,48 @@
     padding: 10px;
   }
 
+  .expositor{
+    margin-top: 0px;
+    transition: 0.5s;
+  }
+
+  .expositor:hover{
+    margin-top: -10px;
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 10px 21px -6px rgba(0,0,0,0.76);
+    -moz-box-shadow: 0px 10px 21px -6px rgba(0,0,0,0.76);
+    box-shadow: 0px 10px 21px -6px rgba(0,0,0,0.76);
+  }
+
+  .seleccionDesactivada {
+    user-select: none;
+    -moz-user-select: none;
+  }
+
+  .btn-evexnod-outline{
+    background-color: transparent;
+    color:grey;
+    font-size: 18px;
+    border: 2px solid;
+    padding: 6px;
+    border-color: grey;
+    border-width: 2px;
+  }
+
+  /*.btn-evexnod-outline:hover{
+    
+    padding: 8px;
+    transition: 0.3s;
+    }*/
+  .evexnod-expositor-font{
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: rgb(59, 134, 209);
+    font-weight: bolder;
+    text-transform: uppercase;
+    /*font-family: 'Farro', sans-serif;*/
+  }
+
 </style>
 
 <script>
