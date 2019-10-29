@@ -18,7 +18,6 @@
 
   .navbar-position
   {
-    /*position: absolute;*/
     z-index: 101;
     width: 100%;
   }
@@ -27,12 +26,9 @@
     margin-left: 40px;
   }
   .dropdown-item{
-    /*opacity: 1 !important;*/
-    /*filter: alpha(opacity=50) !important;*/
     color: background-color: rgb(59, 134, 209);
   }
   .dropdown-item:hover{
-    /*color: background-color: rgb(59, 134, 209);*/
     background-color: rgb(98, 167, 204);
   }
   .dropdown-menu{
@@ -52,8 +48,6 @@
 
   .navPrincipal
   {
-    /*opacity: 0.7;*/
-    /*filter: alpha(opacity=50);*/
     background-color: rgb(59, 134, 209);
   }
   .active{
@@ -66,27 +60,22 @@
   .navbar
   {
     font-family: 'Farro', sans-serif;
-/*    -webkit-box-shadow: 0px 9px 15px -4px rgba(0,0,0,0.91); 
-box-shadow: 0px 9px 15px -4px rgba(0,0,0,0.91);*/
-}
+  }
 
-.ul-usuario
-{
-  float: left;
-  margin: 0px;
-  padding: 0px;
-  text-decoration: none;
-  float: left;
+  .ul-usuario
+  {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    float: left;
 
-}
+  }
 
-.img-pro{
-  height: 60px;
-  width: 60px;
-  position: relative; left: 20px
-
-    /*clip-path: polygon(0 0, 10% 0, 10% 10%, 10% 10%); 
-    clip-path: circle(50px at 50% 150px);*/
+  .img-pro{
+    height: 60px;
+    width: 60px;
+    position: relative; left: 20px
   }
   .img-pro:hover{
     clip-path: polygon(0 0, 10% 0, 10% 10%, 0 10%); 
@@ -135,22 +124,15 @@ box-shadow: 0px 9px 15px -4px rgba(0,0,0,0.91);*/
     border-color: grey;
     border-width: 2px;
   }
+  .evexnod-expositor-font{
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: rgb(59, 134, 209);
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
 
-  /*.btn-evexnod-outline:hover{
-    
-    padding: 8px;
-    transition: 0.3s;
-    }*/
-    .evexnod-expositor-font{
-      font-size: 18px;
-      letter-spacing: 2px;
-      color: rgb(59, 134, 209);
-      font-weight: bolder;
-      text-transform: uppercase;
-      /*font-family: 'Farro', sans-serif;*/
-    }
-
-  </style>
+</style>
 
   <!-- <script>
 
@@ -187,12 +169,12 @@ box-shadow: 0px 9px 15px -4px rgba(0,0,0,0.91);*/
           <a class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown">JUEGOS</a>
           <div class="dropdown-menu">
             <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-chess-rook"></i> BATTLE OF DUNGEON</a>
-            <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-chess-rook"></i> DEFENSE OF TWEDJEN TOWER</a>
+            <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fab fa-fort-awesome"></i> DEFENSE OF TWEDJEN TOWER</a>
             <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-globe-americas"></i> RHAN'S JOURNEY</a>
             <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-user-astronaut"></i> OPERATION RECONQUEST</a>
             <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-rocket"></i> ENDLESS ASTEROIDS</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-rocket"></i> Javascript</a>
+            <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fab fa-js-square"></i> El Javascript xd</a>
             
           </div>
         </li>
@@ -220,15 +202,15 @@ box-shadow: 0px 9px 15px -4px rgba(0,0,0,0.91);*/
         <a class="nav-link blanco-trans evexnod-navbar-font" href="#">SOPORTE <span class="sr-only">(current)</span></a>
       </li>
 
-       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown">USUARIO</a>
-          <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-sign-in-alt"></i> INICIAR SESION</a>
-            <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-pen-square"></i> REGISTRARSE</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-book-open"></i> TERMINOS Y CONDICIONES</a>
-          </div>
-        </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown">USUARIO</a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item evexnod-navbar-font" data-toggle="modal" data-target="#sesion" href="#"><i class="fas fa-sign-in-alt"></i> INICIAR SESION</a>
+          <a class="dropdown-item evexnod-navbar-font" data-toggle="modal" data-target="#registro" href="#"><i class="fas fa-pen-square"></i> REGISTRARSE</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item evexnod-navbar-font" data-toggle="modal" data-target="#reglas" href="#"><i class="fas fa-book-open"></i> TERMINOS Y CONDICIONES</a>
+        </div>
+      </li>
 
     </ul>
   </div>
