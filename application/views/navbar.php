@@ -89,19 +89,7 @@ box-shadow: 0px 9px 15px -4px rgba(0,0,0,0.91);
   var login = false;
 
   $(document).ready(function(){
-    $("#login").hide();
-    $("#usuario").hide();
-    $("#perfil").click(function(){
-      if (login == false) {
-        $("#login").show();
-        $(this).html('Perfil <i class="fas fa-chevron-up"></i><span class="sr-only">(current)</span>');
-        login = true;
-      }else{
-        $("#login").hide();
-        $(this).html('Perfil <i class="fas fa-chevron-down"></i><span class="sr-only">(current)</span>');
-        login = false;
-      }   
-    });
+
   });
 
 </script>

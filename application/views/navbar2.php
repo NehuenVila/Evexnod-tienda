@@ -134,28 +134,15 @@
 
 </style>
 
-  <!-- <script>
+  <script>
 
     var login = false;
 
     $(document).ready(function(){
-      $("#login").hide();
-      $("#usuario").hide();
-      $("#perfil").click(function(){
-        if (login == false) {
-          $("#login").show();
-          $(this).html('PERFIL <i class="fas fa-chevron-up"></i><span class="sr-only">(current)</span>');
-          login = true;
-        }else{
-          $("#login").hide();
-          $(this).html('PERFIL <i class="fas fa-chevron-down"></i><span class="sr-only">(current)</span>');
-          login = false;
-        }   
-      });
+     
     });
 
-  </script> -->
-
+  </script>
   <nav class="navbar navbar-expand-lg  navbar-dark navPrincipal navbar-position">
 
     <a  class="navbar-brand blanco-trans evexnod-navbar-font" style="font-size: 18px" href="<?php echo base_url()?>inicio/"><img style="margin-right: 10px" src="<?php echo base_url()?>assets/img/evexnod_logo.png" alt="">Evexnod</a>
@@ -203,12 +190,24 @@
       </li>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown">USUARIO</a>
+        <?php if(isset($id)) { ?>
+        <a style="text-transform: uppercase" class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown"><?php echo $nombre; ?></a>
         <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item evexnod-navbar-font" data-toggle="modal" data-target="#sesion" href="#"><i class="fas fa-sign-in-alt"></i> INICIAR SESION</a>
-          <a class="dropdown-item evexnod-navbar-font" data-toggle="modal" data-target="#registro" href="#"><i class="fas fa-pen-square"></i> REGISTRARSE</a>
+          <a class="dropdown-item evexnod-navbar-font" id="N_usuario" data-toggle="modal" data-target="#premium" href="#"> <?php if ($premium == 0) {?>Usuario no premium</a>
+           <?php }else{ ?>
+            Usuario premium </a>
+            <?php } ?>
+          <a class="dropdown-item evexnod-navbar-font" id="N_usuario" data-toggle="modal" data-target="#monedas" href="#"> Monedas: <?php echo $creditos; ?></a>
+          <a class="dropdown-item evexnod-navbar-font" id="M_usuario" href="<?php echo base_url()?>inicio/cerrar_sesion"> Cerrar Sesion</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item evexnod-navbar-font" data-toggle="modal" data-target="#reglas" href="#"><i class="fas fa-book-open"></i> TERMINOS Y CONDICIONES</a>
+        <?php } else { ?>
+          <a style="text-transform: uppercase" class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown">USUARIO</a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item evexnod-navbar-font" id="N_usuario" data-toggle="modal" data-target="#sesion" href="#"><i class="fas fa-sign-in-alt"></i> INICIAR SESION</a>
+          <a class="dropdown-item evexnod-navbar-font" id="M_usuario" data-toggle="modal" data-target="#registro" href="#"><i class="fas fa-pen-square"></i> REGISTRARSE</a>
+          <div class="dropdown-divider"></div>
+        <?php } ?>
+          <a class="dropdown-item evexnod-navbar-font" id="C_usuario" data-toggle="modal" data-target="#reglas" href="#"><i class="fas fa-book-open"></i> TERMINOS Y CONDICIONES</a>
         </div>
       </li>
 
@@ -350,4 +349,74 @@
       </div>
     </div>
   </div>
+</div>
+
+<!-- modal comprar monedas -->
+<div class="modal fade" id="monedas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <form action="<?php echo base_url()?>inicio/comprar_monedas" method="post" name="monedas">
+    <div class="modal-dialog modal-dialog-scrollable|modal-dialog-centered modal-sm|modal-lg|modal-xl" role="document">
+      <div class="modal-content" style="background-color: rgba(59, 134, 209, 0.9);border-radius: 0px">
+        <div class="modal-header">
+          <h5 class="modal-title evexnod-navbar-font" style="font-size: 28px"id="exampleModalLongTitle">Cargar monedas:</h5>
+        </div>
+        <div class="modal-body" style="background-color: rgba(146,154,176, 0.1); background-image: url('<?php echo base_url(); ?>assets/img/fondos/4.png');">
+          <h5 style="color: rgba(255,255,255,0.8)">Ingrese su monto a cargar</h5>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <input type="text" required="required" class="form-control input-evexnod" name="monedas" id="monedas" placeholder="Cantidad de monedas">
+            </div>
+          </div>      
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label style="color:white"class="form-check-label" for="gridCheck">
+                Acepto los <a href="" data-dismiss="modal" data-toggle="modal" data-target="#reglas" style="color: #f2f2f2;font-style: italic;">Términos y condiciones</a> de Evexnod.
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="btn-group" role="group" aria-label="Basic example"style="width: 100%">
+            <button type="button" style="width: 30%;border-radius: 0px"class="btn btn-outline-light" data-dismiss="modal"><i class="fas fa-times-circle"></i> Cerrar</button>
+            <button type="submit" style="width: 30%;border-radius: 0px"class="btn btn-outline-light"><i class="fas fa-pen-square"></i> Cargar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- modal comprar premium -->
+<div class="modal fade" id="premium" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <form action="<?php echo base_url()?>inicio/comprar_premium" method="post" name="premium">
+    <div class="modal-dialog modal-dialog-scrollable|modal-dialog-centered modal-sm|modal-lg|modal-xl" role="document">
+      <div class="modal-content" style="background-color: rgba(59, 134, 209, 0.9);border-radius: 0px">
+        <div class="modal-header">
+          <h5 class="modal-title evexnod-navbar-font" style="font-size: 28px"id="exampleModalLongTitle">Acceso usuario premium:</h5>
+        </div>
+        <div class="modal-body" style="background-color: rgba(146,154,176, 0.1); background-image: url('<?php echo base_url(); ?>assets/img/fondos/4.png');">
+          <h5 style="color: rgba(255,255,255,0.8)">Eliga su packete premium</h5>
+          <div class="form-row">
+            <!-- <div class="form-group col-md-12">
+              <input type="text" required="required" class="form-control input-evexnod" name="monedas" id="monedas" placeholder="Cantidad de monedas">
+            </div> -->
+          </div>      
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label style="color:white"class="form-check-label" for="gridCheck">
+                Acepto los <a href="" data-dismiss="modal" data-toggle="modal" data-target="#reglas" style="color: #f2f2f2;font-style: italic;">Términos y condiciones</a> de Evexnod.
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="btn-group" role="group" aria-label="Basic example"style="width: 100%">
+            <button type="button" style="width: 30%;border-radius: 0px"class="btn btn-outline-light" data-dismiss="modal"><i class="fas fa-times-circle"></i> Cerrar</button>
+            <button type="submit" style="width: 30%;border-radius: 0px"class="btn btn-outline-light"><i class="fas fa-pen-square"></i> Cargar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>

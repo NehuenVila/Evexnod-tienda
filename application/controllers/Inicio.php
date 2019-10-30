@@ -7,7 +7,7 @@ class Inicio extends CI_Controller {
     {
         parent::__construct();
         $this->load->library('session');
-        $this->load->model('Usuario_model');
+        $this->load->model('usuario_model');
 
     }
 
@@ -15,12 +15,6 @@ class Inicio extends CI_Controller {
 	{
 		$userdata = $this->session->userdata();
 		// ver si session esta iniciada
-		if($this->session->has_userdata('usuario')&&$this->session->has_userdata('password'))
-		{
-			// si la session esta abierta
-			redirect('inicio/mostrar_registro');
-			return;
-		}
 
 		$this->load->view('header', $userdata);
 		$this->load->view('navbar2');
@@ -89,8 +83,8 @@ class Inicio extends CI_Controller {
 		);
 
 		
-		//if(empty($this->Usuario_model->verificar('correo', $u_correo))) // otra forma de hacer lo que esta abajo
-		$consulta = $this->Usuario_model->verificar('correo', $u_correo); // verificar si existe el correo en db
+		//if(empty($this->usuario_model->verificar('correo', $u_correo))) // otra forma de hacer lo que esta abajo
+		$consulta = $this->usuario_model->verificar('correo', $u_correo); // verificar si existe el correo en db
 		if($consulta)
 		{
 			//correo existe no se puede registrar en la base de datos
@@ -99,7 +93,7 @@ class Inicio extends CI_Controller {
 		else
 		{
 			//si el correo no esta en uso carga los datos en la base de datos
-			$this->Usuario_model->insertar($u_data);
+			$this->usuario_model->insertar($u_data);
 			redirect('inicio');
 		}
 		
@@ -125,14 +119,14 @@ class Inicio extends CI_Controller {
 			'clave'=> $u_clave,
 			'monedas' => 1000
 		);
-		if ($this->Usuario_model->verificar('correo', $u_correo)) // si el correo ingresado existe
+		if ($this->usuario_model->verificar('correo', $u_correo)) // si el correo ingresado existe
 		{
-			$fila = $this->Usuario_model->verificar('correo', $u_correo); // trae todos los datos con ese correo
+			$fila = $this->usuario_model->verificar('correo', $u_correo); // trae todos los datos con ese correo
 
 			if ($u_data['clave'] == $fila->clave) // si la clave ingresada concuerda con la clave de ese correo
 			{
 				//si los datos son correctos
-				$this->session->set_userdata($u_data);
+				$this->session->set_userdata((array)$fila);
 				redirect('inicio');
 			}
 			else
@@ -149,6 +143,20 @@ class Inicio extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect('inicio');
 	}
+
+ 	public function comprar_monedas(){
+
+		$cantidad 	= $this->input->post('monedas');
+		$usuario_id	= $this->session->userdata('id');
+		$creditos 	= $this->session->userdata('creditos');
+
+		$data = array( 'creditos' => $creditos + $cantidad );
+		$this->usuario_model->modifica($data, $usuario_id);
+		$usuario_actualizado = $this->usuario_model->verificar('id', $usuario_id);
+		$this->session->set_userdata('creditos', $usuario_actualizado->creditos);
+		redirect('inicio');
+	
+ 	}
 
 	public function mostrar_tienda()
 	{

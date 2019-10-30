@@ -17,5 +17,10 @@ class Usuario_model extends CI_Model {
 		$consulta = $this->db->get();
 		return $consulta->row();
 	}
+	public function modifica($data, $id)
+	{
+		$this->db->where('usuarios.id', $id);
+		return $this->db->update('usuarios', $data);
+	}
 
 }
