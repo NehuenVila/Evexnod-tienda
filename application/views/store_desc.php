@@ -2,20 +2,21 @@
 
 	<div class="col-sm-4 text-center" style="">
 		
-		<h5 class="evexnod-expositor-font" style="color:white;font-size: 24px"> <span><i class="fas fa-newspaper"></i></span> placeholder_1</h5>
-		<p style="color:white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et possimus, placeat similique voluptates earum aliquid, esse doloremque suscipit, explicabo molestiae nesciunt cum laborum vero. Dolore assumenda nemo itaque qui impedit!</p>
+		<h5 class="evexnod-expositor-font" style="color:white;font-size: 24px"> <span><i class="fas fa-newspaper"></i></span>Arma tu estrategia</h5>
+		<p style="color:white">Selecciona una de las tres grandes razas para defender tus tesoros, Elfos, Enanos y Magos. Cada uno cuenta con 3 torres exclusivas y 3 mejoras para cada una</p>
 
 	</div>	
 	<div class="col-sm-4 text-center" style="background-color: ">
 
-		<h5 class="evexnod-expositor-font" style="color:white;font-size: 24px"> <span><i class="fas fa-newspaper"></i></span> placeholder_2</h5>
-		<p style="color:white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et possimus, placeat similique voluptates earum aliquid, esse doloremque suscipit, explicabo molestiae nesciunt cum laborum vero. Dolore assumenda nemo itaque qui impedit!</p>
+		<h5 class="evexnod-expositor-font" style="color:white;font-size: 24px"> <span><i class="fas fa-newspaper"></i></span>Contenido</h5>
+		<p style="color:white"> Mas de 15 niveles, desafios y distintas dificultades
+		para que tu divercion nunca se termine</p>
 		
 	</div>
 	<div class="col-sm-4 text-center" style="background-color: ">
 
-		<h5 class="evexnod-expositor-font" style="color:white;font-size: 24px"> <span><i class="fas fa-newspaper"></i></span> placeholder_3</h5>
-		<p style="color:white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et possimus, placeat similique voluptates earum aliquid, esse doloremque suscipit, explicabo molestiae nesciunt cum laborum vero. Dolore assumenda nemo itaque qui impedit!</p>
+		<h5 class="evexnod-expositor-font" style="color:white;font-size: 24px"> <span><i class="fas fa-newspaper"></i></span>Contenido academico</h5>
+		<p style="color:white">Todo el juego esta hecho por el alumno durante el periodo de clases y sera presentado como proyecto final en la ULP</p>
 		
 	</div>
 

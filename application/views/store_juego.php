@@ -29,7 +29,7 @@
 		<div class="row">
 			<div class="col-sm-6">
 
-				<h1 style="padding: 25px;font-weight: bolder">NOMBRE_DEL_JUEGO</h1>
+				<h1 style="padding: 25px;font-weight: bolder">BATTLE OF DUNGEON</h1>
 			</div>
 
 			<div class="col-sm-6">
@@ -48,7 +48,7 @@
 	<div class="modal-dialog modal-dialog-scrollable|modal-dialog-centered modal-sm|modal-lg|modal-xl" role="document">
 		<div class="modal-content" style="background-color: rgba(59, 134, 209, 0.9);border-radius: 0px">
 			<div class="modal-header">
-				<h5 class="modal-title evexnod-navbar-font" style="font-size: 28px"id="exampleModalLongTitle">TITULO_DEL_JUEGO</h5>
+				<h5 class="modal-title evexnod-navbar-font" style="font-size: 28px"id="exampleModalLongTitle">BATTLE OF DUNGEON</h5>
 				
 			</div>
 			<!-- <div class="modal-body" style="background-color: rgba(146,154,176, 0.1)"> -->
