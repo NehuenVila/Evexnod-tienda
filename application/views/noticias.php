@@ -15,13 +15,13 @@
 
 					<div class="row" style="height: 10%;padding: 0px 20px 10px 20px">
 						<div class="col-sm-12" style="background-color: rgba(59, 134, 209, 0.5);padding:5px">
-							<h5 class="evexnod-expositor-font" style="margin: 0px;color:white">Titulo Noticia 1 <span style="float:right">00/00/0000</span></h5>
+							<h5 class="evexnod-expositor-font" style="margin: 0px;color:white">El nuevo exito Endless Asteroid <span style="float:right">5/11/2019</span></h5>
 						</div>
 					</div>
 
 					<div class="row" style="height: 90%;padding: 10px 20px 10px 20px">
 						<div class="col-sm-12" style="">
-							<p style="margin:0px;margin-top: 5px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolores itaque. Unde itaque architecto beatae facilis sequi magnam eligendi sunt saepe laboriosam numquam dicta perferendis ducimus voluptate veniam perspiciatis expedita ullam blanditiis, possimus molestiae optio. Modi, animi. Culpa iusto, voluptates non! Provident dolore illum, cupiditate.</p>
+							<p style="margin:0px;margin-top: 5px">Endless Asteroid en nuevo juego de la famosa empresa Evenod Games esta causando un gran impacto en la clase de gestion de proyectos con el profe Francisco. Su nueva entrega promete meterse en el top juegos de la ULP</p>
 						</div>
 
 						<div style="width: 100%">
@@ -38,13 +38,13 @@
 
 					<div class="row" style="height: 10%;padding: 0px 20px 10px 20px">
 						<div class="col-sm-12" style="background-color: rgba(59, 134, 209, 0.5);padding:5px">
-							<h5 class="evexnod-expositor-font" style="margin: 0px;color:white">Titulo Noticia 2 <span style="float:right">00/00/0000</span></h5>
+							<h5 class="evexnod-expositor-font" style="margin: 0px;color:white">Problemas en Evexnod<span style="float:right">29/10/2019</span></h5>
 						</div>
 					</div>
 
 					<div class="row" style="height: 90%;padding: 10px 20px 10px 20px">
 						<div class="col-sm-12" style="">
-							<p style="margin:0px;margin-top: 5px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolores itaque. Unde itaque architecto beatae facilis sequi magnam eligendi sunt saepe laboriosam numquam dicta perferendis ducimus voluptate veniam perspiciatis expedita ullam blanditiis, possimus molestiae optio. Modi, animi. Culpa iusto, voluptates non! Provident dolore illum, cupiditate.</p>
+							<p style="margin:0px;margin-top: 5px">Un empleado de la gran empresa de videojuegos Evexnod Games ah dicho en una entrevista que uno de los jefes de la empresa Diego Euricio a veces llega "drogado" a la oficina. La FIP esta investigando este rumor, de ser cierto Evexnod Games debera pagar una multa por sus malas practicas</p>
 						</div>
 
 						<div style="width: 100%">

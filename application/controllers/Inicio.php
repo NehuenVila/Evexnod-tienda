@@ -88,12 +88,14 @@ class Inicio extends CI_Controller {
 		if($consulta)
 		{
 			//correo existe no se puede registrar en la base de datos
-			echo "correo en uso";
+			$this->session->set_userdata('error', "el correo ya esta en uso");
+			redirect('inicio');
 		}
 		else
 		{
 			//si el correo no esta en uso carga los datos en la base de datos
 			$this->usuario_model->insertar($u_data);
+			$this->session->set_userdata('success', "cuenta creada con exito");
 			redirect('inicio');
 		}
 		
@@ -127,15 +129,18 @@ class Inicio extends CI_Controller {
 			{
 				//si los datos son correctos
 				$this->session->set_userdata((array)$fila);
+				$this->session->set_userdata('success', "Sesion iniciada");
 				redirect('inicio');
 			}
 			else
 			{
 				// no se pudo iniciar sesion datos incorrectos
-				echo "datos incorrectos";
+				$this->session->set_userdata('error', "datos incorrectos");
+				redirect('inicio');
 			}
 		}
-		echo "Mail incorrecto";		
+		$this->session->set_userdata('error', "Datos incorrectos");		
+		redirect('inicio');
 	}
 
 	public function cerrar_sesion()
@@ -154,43 +159,41 @@ class Inicio extends CI_Controller {
 		$this->usuario_model->modifica($data, $usuario_id);
 		$usuario_actualizado = $this->usuario_model->verificar('id', $usuario_id);
 		$this->session->set_userdata('creditos', $usuario_actualizado->creditos);
+		$this->session->set_userdata('success', "Compra realizada con exito");
 		redirect('inicio');
 	
  	}
 
+ 	public function comprar_premium(){
+
+ 		$usuario_id	= $this->session->userdata('id');
+		$premium 	= $this->session->userdata('premium');
+		$creditos 	= $this->session->userdata('creditos');
+
+		if ($creditos >= 100) {
+			$data = array('premium' => $premium = 1,'creditos' => $creditos -100);
+			$this->usuario_model->modifica($data, $usuario_id);
+			$usuario_actualizado = $this->usuario_model->verificar('id', $usuario_id);
+			$this->session->set_userdata('premium', $usuario_actualizado->premium);
+			$this->session->set_userdata('creditos', $usuario_actualizado->creditos);
+			$this->session->set_userdata('success', "Compra realizada con exito");
+			redirect('inicio');
+		}else{
+			$this->session->set_userdata('error', "Monedas insuficientes");
+			redirect('inicio');
+		}	
+
+ 	}
+
+ 	public function comprar_juego(){
+		// $creditos = $this->session->userdata('creditos');
+	}
+
 	public function mostrar_tienda()
 	{
-		$planilla1 = array
-		(
-			'imagen' => 'https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/999/EP1003-CUSA06560_00-MNCRSHFULLBUNEIS/1557966366000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000',
-			'descripcion' => 'el juego del euricio',
-			'nombre' => 'PREY',
-			'precio' => '$500'
-		);
 
-		$planilla2 = array
-		(
-			'imagen' => 'https://originassets.akamaized.net/origin-com-store-final-assets-prod/193632/231.0x326.0/1036451_LB_231x326_en_US_%5E_2017-10-06-22-35-54_254c746f36fdb1f4c9de2634d498aae343dc4cd6.jpg',
-			'descripcion' => 'el juego de los autos pro',
-			'nombre' => 'NEED FOR SPEED',
-			'precio' => '$5000'
-		);
-
-		$planilla3 = array
-		(
-			'imagen' => 'https://store-images.s-microsoft.com/image/apps.17382.13510798887677013.afcc99fc-bdcc-4b9c-8261-4b2cd93b8845.49beb011-7271-4f15-a78b-422c511871e4?mode=scale&q=90&h=300&w=200',
-			'descripcion' => 'jueguito',
-			'nombre' => 'MINECRAFT',
-			'precio' => '$200'
-		);
-
-		$this->load->view('header');
-		$this->load->view('navbar');
-		$this->load->view('planilla_tienda', $planilla1);
-		$this->load->view('planilla_tienda', $planilla2);
-		$this->load->view('planilla_tienda', $planilla3);
-		$this->load->view('footer');
 	}
+		
 
 	public function mostrar_registro_imagen()
 	{
