@@ -1,5 +1,5 @@
 <!-- MUCHO TEXTO EN EL SEGUNDO EXPOSITOR Y MUCHO TITULO EN EL TERCERO -->
-<!-- VER TAMAÑO DE FUENTE EN TITULOS DE EVEXNOD PREMIUM -->
+<!-- CAMBIAR TAMAÑO DE FUENTE EN TITULOS DE EVEXNOD PREMIUM -->
 
 <div class="row contenedor d-sm-none" style="background-color: transparent;height: 420px">
 	<div class="col-sm-12">	
@@ -11,7 +11,7 @@
 	</div>
 </div>
 
-<div class="row contenedor d-none d-md-block" style="background-color: red;height: 420px">
+<div class="row contenedor d-none d-md-block" style="background-color: transparent;height: 420px">
 	<div class="col-sm-12">
 		<div class="row" style="background-color: transparent;">
 			<h3 class="evexnod-navbar-font mx-auto blanco-trans" style="font-weight: bolder;font-size: 34px;text-shadow: #CCC 1px 0 10px; position: relative; ">JUEGOS DESTACADOS</h3>
