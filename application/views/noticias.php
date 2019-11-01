@@ -1,5 +1,5 @@
 
-<div class="row contenedor" style="background-color: transparent;height: 370px">
+<div class="row contenedor d-none d-sm-block" style="background-color: yellow;height: 370px">
 
 	<div class="col-sm-12">
 		<div class="row" style="background-color: transparent;">
@@ -21,7 +21,7 @@
 
 					<div class="row" style="height: 90%;padding: 10px 20px 10px 20px">
 						<div class="col-sm-12" style="">
-							<p style="margin:0px;margin-top: 5px">Endless Asteroid en nuevo juego de la famosa empresa Evenod Games esta causando un gran impacto en la clase de gestion de proyectos con el profe Francisco. Su nueva entrega promete meterse en el top juegos de la ULP</p>
+							<p style="margin:0px;margin-top: 5px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dignissimos rerum saepe commodi hic culpa esse nostrum eveniet. Facilis, earum rerum quis eum minus dolorum rem! Mollitia illum in repudiandae!</p>
 						</div>
 
 						<div style="width: 100%">
@@ -44,7 +44,7 @@
 
 					<div class="row" style="height: 90%;padding: 10px 20px 10px 20px">
 						<div class="col-sm-12" style="">
-							<p style="margin:0px;margin-top: 5px">Un empleado de la gran empresa de videojuegos Evexnod Games ah dicho en una entrevista que uno de los jefes de la empresa Diego Euricio a veces llega "drogado" a la oficina. La FIP esta investigando este rumor, de ser cierto Evexnod Games debera pagar una multa por sus malas practicas</p>
+							<p style="margin:0px;margin-top: 5px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vitae voluptatibus, quas ab quis earum tempora aliquam perspiciatis in magni deleniti dolor, tenetur molestias maxime obcaecati dolorem, inventore, repudiandae doloribus.</p>
 						</div>
 
 						<div style="width: 100%">
