@@ -451,6 +451,7 @@ function sacar_vida3(atacante, defensor)
 }
 
 var pausa = false;
+var puntosTotales = 0;
 
 function inicio_combate_automatico3(){
 	$("#btn-clases").attr({
@@ -461,12 +462,19 @@ function inicio_combate_automatico3(){
 	});
 	var combate3v3 = setInterval(function arez(){ ataque3();
 		if(actor_pricipal.vida<=0 && actor_secundario.vida<=0&&actor_terciario.vida<=0){
-			console.log("DERROTA");
-			console.log("Rondas completadas: "+rondasSuperadas);
-			console.log("Enemigos eliminados: "+enemigosEliminados+" ("+enemigosEliminados*3+")");
-			console.log("Puntos conseguidos "+rondasSuperadas*enemigosEliminados*3);
-			document.getElementById('ganador').innerHTML = "DERROTA <br> Rondas superadas: "+rondasSuperadas+" <br>\nPuntos conseguidos "+rondasSuperadas*enemigosEliminados*5;
+			puntosTotales = rondasSuperadas*enemigosEliminados*5;
+			document.getElementById('ganador').innerHTML = "DERROTA <br> Rondas superadas: "+rondasSuperadas+" <br>\nPuntos conseguidos "+puntosTotales;
 			clearInterval(combate3v3);
+			console.log(puntosTotales);
+			$.ajax({
+				url: base_url + 'inicio/guardar_puntaje',
+				type: 'POST',
+				data: { puntaje: puntosTotales},
+			})
+			.done(function() {
+				console.log("success");
+			});
+			
 		}
 		if(pausa){
 			clearInterval(combate3v3);

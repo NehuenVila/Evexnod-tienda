@@ -193,6 +193,18 @@ class Inicio extends CI_Controller {
 	{
 
 	}
+
+	public function guardar_puntaje(){
+		$puntaje = $this->input->post('puntaje');
+		$usuario_id = $this->session->userdata('id');
+		$data = array(
+			'puntaje' => $puntaje,
+			'usuario_id' => $usuario_id
+		);
+		$data_puntaje = $this->usuario_model->alta_puntaje($data);
+
+		echo json_encode($data_puntaje);
+	}
 		
 
 	public function mostrar_registro_imagen()

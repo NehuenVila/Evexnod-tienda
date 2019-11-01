@@ -8,6 +8,9 @@ class Usuario_model extends CI_Model {
 	public function insertar($data){
 		return $this->db->insert('usuarios', $data);
 	}
+	public function alta_puntaje($data){
+		return $this->db->insert('puntajes', $data);
+	}
 
 	public function verificar($nombre_atributo, $valor_atributo)
 	{
