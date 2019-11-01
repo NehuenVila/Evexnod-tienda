@@ -134,77 +134,78 @@
 
 </style>
 
-  <script>
+<script>
 
-    var login = false;
+  var login = false;
 
-    function ocultarAlerta(){
-        $('#alerta').hide();
+  function ocultarAlerta(){
+    $('#alerta').hide();
         // $.ajax({
         // url: base_url + 'inicio/cerrar_sesion',
         // type: 'POST'
         // });
-        }
-        $(document).ready(function(){
+      }
+      $(document).ready(function(){
 
         if ($('#alerta').length > 0){
-        setTimeout(function(){
-        ocultarAlerta();
-        }, 4500);
+          setTimeout(function(){
+            ocultarAlerta();
+          }, 4500);
         }
-        });
+      });
 
-  </script>
-  <?php if(isset($error)) { ?>
-  <div style="position: absolute; z-index: 110;" class="alert alert-danger" id="alerta" role="alert">
-    <?php echo $error; ?>
-  </div>
-  <?php } ?>
-  <!-- alerta exitosa -->
-  <?php if(isset($success)) { ?>
-  <div style="position: absolute; z-index: 110;" class="alert alert-success" id="alerta" role="alert">
-    <?php echo $success; ?>
-  </div>
-  <?php } ?>
-  <nav class="navbar navbar-expand-lg  navbar-dark navPrincipal navbar-position">
+    </script>
+    
+    <?php if(isset($error)) { ?>
+      <div style="position: absolute; z-index: 110;width: 100%" class="alert alert-danger" id="alerta" role="alert">
+        <?php echo $error; ?>
+      </div>
+    <?php } ?>
+    <!-- alerta exitosa -->
+    <?php if(isset($success)) { ?>
+      <div style="position: absolute; z-index: 110;width: 100%" class="alert alert-success" id="alerta" role="alert">
+        <?php echo $success; ?>
+      </div>
+    <?php } ?>
+    <nav class="navbar navbar-expand-lg  navbar-dark navPrincipal navbar-position">
 
-    <a  class="navbar-brand blanco-trans evexnod-navbar-font" style="font-size: 18px" href="<?php echo base_url()?>inicio/"><img style="margin-right: 10px" src="<?php echo base_url()?>assets/img/evexnod_logo.png" alt="">Evexnod</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <a  class="navbar-brand blanco-trans evexnod-navbar-font" style="font-size: 18px" href="<?php echo base_url()?>inicio/"><img style="margin-right: 10px" src="<?php echo base_url()?>assets/img/evexnod_logo.png" alt="">Evexnod</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown">JUEGOS</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item evexnod-navbar-font" href="<?php echo base_url()?>./inicio/tienda1"><i class="fas fa-chess-rook"></i> BATTLE OF DUNGEON</a>
-            <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fab fa-fort-awesome"></i> DEFENSE OF TWEDJEN TOWER</a>
-            <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-globe-americas"></i> RHAN'S JOURNEY</a>
-            <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-user-astronaut"></i> OPERATION RECONQUEST</a>
-            <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-rocket"></i> ENDLESS ASTEROIDS</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fab fa-js-square"></i> El Javascript xd</a>
-            
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown">JUEGOS</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item evexnod-navbar-font" href="<?php echo base_url()?>./inicio/tienda1"><i class="fas fa-chess-rook"></i> BATTLE OF DUNGEON</a>
+              <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fab fa-fort-awesome"></i> DEFENSE OF TWEDJEN TOWER</a>
+              <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-globe-americas"></i> RHAN'S JOURNEY</a>
+              <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-user-astronaut"></i> OPERATION RECONQUEST</a>
+              <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-rocket"></i> ENDLESS ASTEROIDS</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fab fa-js-square"></i> El Javascript xd</a>
+              
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown">TIENDA</a>
+           <div class="dropdown-menu">
+             <a class="dropdown-item evexnod-navbar-font" href="<?php echo base_url()?>inicio/mostrar_tienda"><i class="fas fa-gamepad"></i> JUEGOS</a>
+             <?php if(isset($id)) { ?>
+              <?php if ($premium == 0) {?>
+                <a class="dropdown-item evexnod-navbar-font" data-toggle="modal" data-target="#premium" href="#"><i class="fas fa-crown"></i> PREMIUM</a>
+              <?php }else{ ?>
+                <a class="dropdown-item evexnod-navbar-font" data-toggle="modal" data-target="#premiumComprado" href="#"><i class="fas fa-crown"></i> PREMIUM</a>
+              <?php } ?>
+            <?php } ?>
+            <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-gem"></i> ESPECIALES</a>
           </div>
         </li>
 
         <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown">TIENDA</a>
-         <div class="dropdown-menu">
-           <a class="dropdown-item evexnod-navbar-font" href="<?php echo base_url()?>inicio/mostrar_tienda"><i class="fas fa-gamepad"></i> JUEGOS</a>
-           <?php if(isset($id)) { ?>
-            <?php if ($premium == 0) {?>
-              <a class="dropdown-item evexnod-navbar-font" data-toggle="modal" data-target="#premium" href="#"><i class="fas fa-crown"></i> PREMIUM</a>
-             <?php }else{ ?>
-              <a class="dropdown-item evexnod-navbar-font" data-toggle="modal" data-target="#premiumComprado" href="#"><i class="fas fa-crown"></i> PREMIUM</a>
-              <?php } ?>
-              <?php } ?>
-           <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-gem"></i> ESPECIALES</a>
-         </div>
-       </li>
-
-       <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown">ACERCA DE</a>
          <div class="dropdown-menu">
            <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-newspaper"></i> NOSOTROS</a>
@@ -220,23 +221,23 @@
 
       <li class="nav-item dropdown">
         <?php if(isset($id)) { ?>
-        <a style="text-transform: uppercase" class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown"><?php echo $nombre; ?></a>
-        <div class="dropdown-menu dropdown-menu-right">
-          <?php if ($premium == 0) {?>
-          <a class="dropdown-item evexnod-navbar-font" id="N_usuario" data-toggle="modal" data-target="#premium" href="#"> Usuario no premium</a>
-           <?php }else{ ?>
+          <a style="text-transform: uppercase" class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown"><?php echo $nombre; ?></a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <?php if ($premium == 0) {?>
+              <a class="dropdown-item evexnod-navbar-font" id="N_usuario" data-toggle="modal" data-target="#premium" href="#"> Usuario no premium</a>
+            <?php }else{ ?>
              <a class="dropdown-item evexnod-navbar-font" data-toggle="modal" data-target="#premiumComprado" href="#"> Usuario premium</a>
-            <?php } ?>
-          <a class="dropdown-item evexnod-navbar-font" id="N_usuario" data-toggle="modal" data-target="#monedas" href="#"> Monedas: <?php echo $creditos; ?></a>
-          <a class="dropdown-item evexnod-navbar-font" id="M_usuario" href="<?php echo base_url()?>inicio/cerrar_sesion"> Cerrar Sesion</a>
-          <div class="dropdown-divider"></div>
-        <?php } else { ?>
+           <?php } ?>
+           <a class="dropdown-item evexnod-navbar-font" id="N_usuario" data-toggle="modal" data-target="#monedas" href="#"> Monedas: <?php echo $creditos; ?></a>
+           <a class="dropdown-item evexnod-navbar-font" id="M_usuario" href="<?php echo base_url()?>inicio/cerrar_sesion"> Cerrar Sesion</a>
+           <div class="dropdown-divider"></div>
+         <?php } else { ?>
           <a style="text-transform: uppercase" class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown">USUARIO</a>
-        <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item evexnod-navbar-font" id="N_usuario" data-toggle="modal" data-target="#sesion" href="#"><i class="fas fa-sign-in-alt"></i> INICIAR SESION</a>
-          <a class="dropdown-item evexnod-navbar-font" id="M_usuario" data-toggle="modal" data-target="#registro" href="#"><i class="fas fa-pen-square"></i> REGISTRARSE</a>
-          <div class="dropdown-divider"></div>
-        <?php } ?>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item evexnod-navbar-font" id="N_usuario" data-toggle="modal" data-target="#sesion" href="#"><i class="fas fa-sign-in-alt"></i> INICIAR SESION</a>
+            <a class="dropdown-item evexnod-navbar-font" id="M_usuario" data-toggle="modal" data-target="#registro" href="#"><i class="fas fa-pen-square"></i> REGISTRARSE</a>
+            <div class="dropdown-divider"></div>
+          <?php } ?>
           <a class="dropdown-item evexnod-navbar-font" id="C_usuario" data-toggle="modal" data-target="#reglas" href="#"><i class="fas fa-book-open"></i> TERMINOS Y CONDICIONES</a>
         </div>
       </li>
@@ -483,3 +484,7 @@
     </div>
   </form>
 </div>
+
+<script>
+  var base_url = '<?php echo base_url(); ?>'
+</script>
