@@ -9,8 +9,7 @@
 	<div class="col-sm-4 text-center" style="background-color: ">
 
 		<h5 class="evexnod-expositor-font" style="color:white;font-size: 24px"> <span><i class="fas fa-newspaper"></i></span>Contenido</h5>
-		<p style="color:white"> Mas de 15 niveles, desafios y distintas dificultades
-		para que tu divercion nunca se termine</p>
+		<p style="color:white"> Mas de 15 niveles, desafios y distintas dificultades para que tu divercion nunca se termine</p> agregar más texto aca
 		
 	</div>
 	<div class="col-sm-4 text-center" style="background-color: ">
