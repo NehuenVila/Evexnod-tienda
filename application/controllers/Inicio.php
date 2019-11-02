@@ -38,9 +38,9 @@ class Inicio extends CI_Controller {
 		$this->load->view('footer2');
 	}
 
-	public function tienda1()
+	public function tienda($id)
 	{
-		$this->load->view('header');
+		$this->load->view('header', $this->session->userdata());
 		$this->load->view('navbar2');
 		$this->load->view('store_carousel');
 		$this->load->view('store_juego');
@@ -54,9 +54,12 @@ class Inicio extends CI_Controller {
 
 	public function juego()
 	{
-		$this->load->view('header');
+
+		$lista_puntajes = $this->usuario_model->obtener_puntajes();
+		$data = array('puntajes' => $lista_puntajes);
+		$this->load->view('header', $this->session->userdata());
 		$this->load->view('navbar2');
-		$this->load->view('game');
+		$this->load->view('game', $data);
 		$this->load->view('footer2');
 	}
 
@@ -185,8 +188,20 @@ class Inicio extends CI_Controller {
 
  	}
 
- 	public function comprar_juego(){
-		// $creditos = $this->session->userdata('creditos');
+ 	public function comprar_juego($id){
+
+		 $creditos = $this->session->userdata('creditos');
+		 $juego_id = $this->uri->segment(3);
+		 $precio = $this->input->post('precio');
+		 $usuario_id = $this->session->userdata('id');
+		 if($creditos >= $precio){
+		 	$data = array('juego_id' => $juego_id, 'usuario_id' => $usuario_id);
+		 	$this->usuario_model->alta_compras($data);
+		 	redirect('inicio/juego'.'/'.$juego_id);
+		 }else{
+		 	$this->session->set_userdata('error', "Monedas insuficientes");
+			redirect('inicio/juego'.'/'.$juego_id);
+		 }
 	}
 
 	public function mostrar_tienda()
@@ -205,6 +220,8 @@ class Inicio extends CI_Controller {
 
 		echo json_encode($data_puntaje);
 	}
+
+
 		
 
 	public function mostrar_registro_imagen()
@@ -213,6 +230,7 @@ class Inicio extends CI_Controller {
 		$this->load->view('prueba_imagenes');
 		$this->load->view('footer');
 	}
+
 
 	public function upload()
 	{

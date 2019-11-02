@@ -462,7 +462,7 @@ function inicio_combate_automatico3(){
 	});
 	var combate3v3 = setInterval(function arez(){ ataque3();
 		if(actor_pricipal.vida<=0 && actor_secundario.vida<=0&&actor_terciario.vida<=0){
-			puntosTotales = rondasSuperadas*enemigosEliminados*5;
+			puntosTotales = enemigosEliminados*10;
 			document.getElementById('ganador').innerHTML = "DERROTA <br> Rondas superadas: "+rondasSuperadas+" <br>\nPuntos conseguidos "+puntosTotales;
 			clearInterval(combate3v3);
 			console.log(puntosTotales);

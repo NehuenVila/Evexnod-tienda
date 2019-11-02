@@ -12,6 +12,19 @@ class Usuario_model extends CI_Model {
 		return $this->db->insert('puntajes', $data);
 	}
 
+	public function alta_compras($data){
+		return $this->db->insert('compras', $data);
+	}
+
+	public function obtener_puntajes(){
+		$this->db->select('puntajes.puntaje, usuarios.nombre');
+		$this->db->from('puntajes');
+		$this->db->join('usuarios', 'puntajes.usuario_id = usuarios.id');
+		$this->db->order_by('puntajes.puntaje', 'DESC');
+		$consulta = $this->db->get();
+		return $consulta->result();
+	}
+
 	public function verificar($nombre_atributo, $valor_atributo)
 	{
 		$this->db->select('usuarios.*');

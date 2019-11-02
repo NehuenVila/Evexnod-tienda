@@ -84,11 +84,13 @@
 						<h5 style="color: rgba(255,255,255,0.8)">NOMBRE_EDICION: <span><span style="float:right"class="badge badge-light">$ 0.000,00</span></span></h5>
 						<p style=" color: rgba(255,255,255,0.8)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione illo eum tempore dolorem eaque fugiat incidunt iusto minima rem eveniet aliquid similique quis laudantium consectetur, officia, ex et distinctio perspiciatis?</p>
 					</div>
+					<form action="<?php echo base_url()?>./inicio/comprar_juego/1" method="post"></form>
 					<div class="modal-footer">
+						<input type="hidden" value="500" name="precio">
 
 						<div class="btn-group" role="group" aria-label="Basic example"style="width: 100%">
 							<button type="button" style="width: 40%;border-radius: 0px"class="btn btn-outline-light" data-dismiss="modal"><i class="fas fa-times-circle"></i> Cerrar</button>
-							<button type="button" style="width: 40%;border-radius: 0px"class="btn btn-outline-light"><i class="fas fa-shopping-cart"></i> Comprar</button>
+							<button type="submit" style="width: 40%;border-radius: 0px"class="btn btn-outline-light"><i class="fas fa-shopping-cart"></i> Comprar</button>
 						</div>
 					</div>
 				</div>

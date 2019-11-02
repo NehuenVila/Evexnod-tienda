@@ -179,7 +179,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown">JUEGOS</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item evexnod-navbar-font" href="<?php echo base_url()?>./inicio/tienda1"><i class="fas fa-chess-rook"></i> BATTLE OF DUNGEON</a>
+              <a class="dropdown-item evexnod-navbar-font" href="<?php echo base_url()?>./inicio/tienda/1"><i class="fas fa-chess-rook"></i> BATTLE OF DUNGEON</a>
               <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fab fa-fort-awesome"></i> DEFENSE OF TWEDJEN TOWER</a>
               <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-globe-americas"></i> RHAN'S JOURNEY</a>
               <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-user-astronaut"></i> OPERATION RECONQUEST</a>

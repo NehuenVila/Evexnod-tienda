@@ -8,7 +8,7 @@
 		<div class="row" style="height: 100%">
 			<div style="height: 220px;padding: 0px 10px 10px 10px;background-color: white"class="col-sm-3 text-center">
 				<div style="height: 40%; width: 100%;background-color: rgba(59, 134, 209, 0.5)">
-					<h1 style="font-size: 48px"><i style="font-size: 48px;color: white;"class="fas fa-newspaper"></i></h1>
+					<h1 style="font-size: 48px"></i></h1>
 					<h5 class="evexnod-expositor-font" style="color:white">Acceso unico</h5>
 				</div>
 				<br>
@@ -16,7 +16,7 @@
 			</div>
 			<div style="height: 220px;padding: 0px 10px 10px 10px;background-color: white"class="col-sm-3 text-center">
 				<div style="height: 40%; width: 100%;background-color: rgba(59, 134, 209, 0.5)">
-					<h1 style="font-size: 48px"><i style="font-size: 48px;color: white;"class="fas fa-newspaper"></i></h1>
+					<h1 style="font-size: 48px"></h1>
 					<h5 class="evexnod-expositor-font" style="color:white"> Recompensas Exclusivas</h5>
 				</div>
 				<br>
@@ -24,7 +24,7 @@
 			</div>
 			<div style="height: 220px;padding: 0px 10px 10px 10px;background-color: white"class="col-sm-3 text-center">
 				<div style="height: 40%; width: 100%;background-color: rgba(59, 134, 209, 0.5)">
-					<h1 style="font-size: 48px"><i style="font-size: 48px;color: white;"class="fas fa-newspaper"></i></h1>
+					<h1 style="font-size: 48px"></h1>
 					<h5 class="evexnod-expositor-font" style="color:white">Perfil exclusivo</h5>
 				</div>
 				<br>
@@ -32,7 +32,7 @@
 			</div>
 			<div style="height: 220px;padding: 0px 10px 10px 10px;background-color: white"class="col-sm-3 text-center">
 				<div style="height: 40%; width: 100%;background-color: rgba(59, 134, 209, 0.5)">
-					<h1 style="font-size: 48px"><i style="font-size: 48px;color: white;"class="fas fa-newspaper"></i></h1>
+					<h1 style="font-size: 48px"></h1>
 					<h5 class="evexnod-expositor-font" style="color:white">Sin limites</h5>
 				</div>
 				<br>

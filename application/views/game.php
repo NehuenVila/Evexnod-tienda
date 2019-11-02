@@ -36,6 +36,13 @@
 <br>
 
 <h1 class="text-center">Java Script Game</h1>
+<?php if(isset($id)) { ?>
+       <?php if ($premium == 0) {?>
+              	<div class="text-center">              		
+                <h5>Obten servicio premium para tener acceso a JS Summoner</h5>
+              	</div>
+       <?php }else{ ?>
+
 <div style="width: 100%" class="text-center">
 <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#puntajes">Puntajes Altos</button>	
 </div>
@@ -255,7 +262,9 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+      	<?php for ($i=0; $i < 5; $i++) { ?>
+      		<p><?php echo (isset($puntajes[$i])) ? $puntajes[$i]->puntaje.' '.$puntajes[$i]->nombre : ''; ?></p>
+      	<?php } ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -318,6 +327,13 @@
 			</div>
 		</div>
 	</div>
+<?php } ?>
+<?php }else{ ?>
+	<div class="text-center">
+		<h5>Inicia sesion para Ver este sitio</h5>
+	</div>
+	
+<?php } ?>
 
 
 
