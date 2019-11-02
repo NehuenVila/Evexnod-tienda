@@ -28,7 +28,7 @@
 
 
 <br>
-<div class="row contenedor d-none d-sm-block" style="background-color: transparent;height: 100%">
+<div class="row contenedor d-none d-sm-block" style="background-color: red;height: 100%">
 	<div class="col-sm-12">
 		<div class="row" style="background-color: transparent;">
 			<h3 class="evexnod-navbar-font mx-auto blanco-trans" style="font-weight: bolder;font-size: 34px;text-shadow: #CCC 1px 0 10px; position: relative; ">EVEXNOD PREMIUM</h3>
