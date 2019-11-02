@@ -157,16 +157,17 @@
     </script>
     
     <?php if(isset($error)) { ?>
-      <div style="position: absolute; z-index: 110;width: 100%" class="alert alert-danger" id="alerta" role="alert">
+      <div style="position: absolute; z-index: 110;width: 100%;border-radius: 0px" class="alert alert-danger text-center" id="alerta" role="alert">
         <?php echo $error; ?>
       </div>
     <?php } ?>
     <!-- alerta exitosa -->
     <?php if(isset($success)) { ?>
-      <div style="position: absolute; z-index: 110;width: 100%" class="alert alert-success" id="alerta" role="alert">
+      <div style="position: absolute; z-index: 110;width: 100%;border-radius: 0px" class="alert alert-success text-center" id="alerta" role="alert">
         <?php echo $success; ?>
       </div>
     <?php } ?>
+    
     <nav class="navbar navbar-expand-lg  navbar-dark navPrincipal navbar-position">
 
       <a  class="navbar-brand blanco-trans evexnod-navbar-font" style="font-size: 18px" href="<?php echo base_url()?>inicio/"><img style="margin-right: 10px" src="<?php echo base_url()?>assets/img/evexnod_logo.png" alt="">Evexnod</a>
@@ -426,7 +427,7 @@
           <h5 class="modal-title evexnod-navbar-font" style="font-size: 28px"id="exampleModalLongTitle">Acceso usuario premium:</h5>
         </div>
         <div class="modal-body" style="background-color: rgba(146,154,176, 0.1); background-image: url('<?php echo base_url(); ?>assets/img/fondos/4.png');">
-          <h5 style="color: rgba(255,255,255,0.8)">Eliga su packete premium</h5>
+          <h5 style="color: rgba(255,255,255,0.8)">Eliga su paquete premium</h5>
           <div class="form-row">
             <!-- <div class="form-group col-md-12">
               <input type="text" required="required" class="form-control input-evexnod" name="monedas" id="monedas" placeholder="Cantidad de monedas">
@@ -444,7 +445,7 @@
         <div class="modal-footer">
           <div class="btn-group" role="group" aria-label="Basic example"style="width: 100%">
             <button type="button" style="width: 30%;border-radius: 0px"class="btn btn-outline-light" data-dismiss="modal"><i class="fas fa-times-circle"></i> Cerrar</button>
-            <button type="submit" style="width: 30%;border-radius: 0px"class="btn btn-outline-light"><i class="fas fa-pen-square"></i> Cargar</button>
+            <button type="submit" style="width: 30%;border-radius: 0px"class="btn btn-outline-light"><i class="fas fa-pen-square"></i> Comprar <span class="badge badge-light">$100</span></button>
           </div>
         </div>
       </div>

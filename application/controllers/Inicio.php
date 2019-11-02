@@ -26,6 +26,33 @@ class Inicio extends CI_Controller {
 		$this->load->view('footer2');
 	}
 
+	public function perfil_usuario()
+	{
+		$this->load->view('header');
+		$this->load->view('navbar2');
+
+		$this->load->view('perfil_usuario');
+
+		$this->load->view('footer2');
+	}
+
+	public function error($tipo)
+	{
+		if($tipo==1)
+		{
+			$this->load->view('header');
+			$this->load->view('navbar2');
+
+			$this->load->view('error_sesion');
+		}else{
+			$this->load->view('header');
+			$this->load->view('navbar2');
+
+			$this->load->view('error_premium');
+		}
+		$this->load->view('footer2');
+	}
+
 	public function evexnod2()
 	{
 		$this->load->view('header');
