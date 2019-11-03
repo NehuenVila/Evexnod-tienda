@@ -59,7 +59,7 @@
 						<img class="img-fluid"src="https://dummyimage.com/1920x1080/000/3b86d1" alt="">
 					</div>
 					<div class="row text-center" style="height: 50%;background-color: white;padding: 7px">
-						<h3 class="mx-auto evexnod-expositor-font">Operation Reconquest</h3><!-- cambiar tamaño de letra o cantidad de texto -->
+						<h3 class="mx-auto evexnod-expositor-font">OP.Reconquest</h3><!-- cambiar tamaño de letra o cantidad de texto -->
 						<div style="height: 50%">Explora el universo con tu amigo, resolviendo rompecabezas para superar los distintos planetas</div>
 						<div class="d-none d-xl-block" style="width: 100%;height: 100%">
 							<div class="btn-group" role="group" aria-label="Basic example" style="width: 100%">
