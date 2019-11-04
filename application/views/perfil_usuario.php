@@ -6,12 +6,14 @@
 
 <script>
 	$(document).ready(function(){
-    $("#a_premium").fadeOut();
-    $("#a_premium").fadeOut("slow");
-    $("a_premium").fadeOut(3000);
-    $("#a_premium").fadeIn();
-    $("#a_premium").fadeIn("slow");
-    $("a_premium").fadeIn(3000);
+		var intervalo = setInterval(function(){
+		    $("#a_premium").fadeOut();
+		    $("#a_premium").fadeOut("slow");
+		    $("a_premium").fadeOut(3000);
+		    $("#a_premium").fadeIn();
+		    $("#a_premium").fadeIn("slow");
+		    $("a_premium").fadeIn(3000);
+		}, 1000);
   });
 </script>
 
