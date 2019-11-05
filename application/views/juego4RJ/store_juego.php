@@ -55,7 +55,7 @@
 		<div class="row">
 			<div class="col-sm-9">
 
-					<h1 class="responsive"style="padding: 25px;font-weight: bolder">BATTLE OF DUNGEON</h1>
+					<h1 class="responsive"style="padding: 25px;font-weight: bolder">RHAN'S JOURNEY</h1>
 					
 				</div>
 
@@ -73,7 +73,7 @@
 
 	<!-- Modal de compra -->
 	<div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-					<form action="<?php echo base_url() ?>inicio/comprar_juego/1" method="post">
+					<form action="<?php echo base_url() ?>inicio/comprar_juego/4" method="post">
 
 		<div class="modal-dialog modal-dialog-scrollable|modal-dialog-centered modal-sm|modal-lg|modal-xl" role="document">
 			<div class="modal-content" style="background-color: rgba(59, 134, 209, 0.9);border-radius: 0px">
