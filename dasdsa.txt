@@ -1,0 +1,117 @@
+public function tienda()
+  {
+    if($this->uri->segment(3)==1)
+    {
+      if($this->Evexnod_model->buscar_compras(1, $this->session->userdata('id')))
+      {
+        $this->session->set_userdata('tiene_juego',1);
+      }else{
+        $this->session->set_userdata('tiene_juego',0);
+      }
+
+      $this->load->view('header', $this->session->userdata());
+      $this->load->view('navbar');
+      $this->load->view('store_carousel');
+      $this->load->view('store_header');
+      $this->load->view('store_buy');
+      $this->load->view('store_desc');
+      $this->load->view('store_req');
+      $this->load->view('store_community');
+      $this->load->view('footer');
+    }
+    else if($this->uri->segment(3)==2)
+    {
+      if($this->Evexnod_model->buscar_compras(2, $this->session->userdata('id')))
+      {
+        $this->session->set_userdata('tiene_juego',1);
+      }else{
+        $this->session->set_userdata('tiene_juego',0);
+      }
+
+      $this->load->view('header', $this->session->userdata());
+      $this->load->view('navbar');
+      $this->load->view('store_carousel');
+      $this->load->view('store_header');
+      $this->load->view('store_buy');
+      $this->load->view('store_desc');
+      $this->load->view('store_req');
+      $this->load->view('store_community');
+      $this->load->view('footer');
+    }
+    else if($this->uri->segment(3)==3)
+    {
+     if($this->Evexnod_model->buscar_compras(3, $this->session->userdata('id')))
+     {
+      $this->session->set_userdata('tiene_juego',1);
+    }else{
+      $this->session->set_userdata('tiene_juego',0);
+    }
+
+    $this->load->view('header', $this->session->userdata());
+    $this->load->view('navbar');
+    $this->load->view('store_carousel');
+    $this->load->view('store_header');
+    $this->load->view('store_buy');
+    $this->load->view('store_desc');
+    $this->load->view('store_req');
+    $this->load->view('store_community');
+    $this->load->view('footer');
+  }
+  else if($this->uri->segment(3)==4)
+  {
+   if($this->Evexnod_model->buscar_compras(4, $this->session->userdata('id')))
+   {
+    $this->session->set_userdata('tiene_juego',1);
+  }else{
+    $this->session->set_userdata('tiene_juego',0);
+  }
+
+  $this->load->view('header', $this->session->userdata());
+  $this->load->view('navbar');
+  $this->load->view('store_carousel');
+  $this->load->view('store_header');
+  $this->load->view('store_buy');
+  $this->load->view('store_desc');
+  $this->load->view('store_req');
+  $this->load->view('store_community');
+  $this->load->view('footer');
+}
+else if($this->uri->segment(3)==5)
+{
+ if($this->Evexnod_model->buscar_compras(5, $this->session->userdata('id')))
+ {
+  $this->session->set_userdata('tiene_juego',1);
+}else{
+  $this->session->set_userdata('tiene_juego',0);
+}
+
+$this->load->view('header', $this->session->userdata());
+$this->load->view('navbar');
+$this->load->view('store_carousel');
+$this->load->view('store_header');
+$this->load->view('store_buy');
+$this->load->view('store_desc');
+$this->load->view('store_req');
+$this->load->view('store_community');
+$this->load->view('footer');
+}
+else if($this->uri->segment(3)==6)
+{
+  $lista_puntajes = $this->Evexnod_model->obtener_puntajes();
+  $data = array('puntajes' => $lista_puntajes);
+
+  $this->load->view('header', $this->session->userdata());
+  $this->load->view('navbar', $data);
+  if($this->session->userdata('evexnod_club')>0)
+  {
+    $this->load->view('game');
+  }
+  else if($this->session->userdata('evexnod_club') == 0 && $this->session->userdata('id')!=NULL)
+  {
+    $this->load->view('error_premium');
+  }else{
+    $this->load->view('error_sesion');
+  }
+  $this->load->view('footer');
+}
+}
