@@ -224,6 +224,7 @@
         <?php if(isset($id)) { ?>
           <a style="text-transform: uppercase" class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown"><?php echo $nombre; ?></a>
           <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item evexnod-navbar-font" id="N_usuario" href="<?php echo base_url()?>inicio/perfil_usuario">Ver perfil</a>
             <?php if ($premium == 0) {?>
               <a class="dropdown-item evexnod-navbar-font" id="N_usuario" data-toggle="modal" data-target="#premium" href="#"> Usuario no premium</a>
             <?php }else{ ?>

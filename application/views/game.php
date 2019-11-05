@@ -254,14 +254,14 @@
 
 <div class="modal fade" id="puntajes" tabindex="-1" role="dialog" aria-labelledby="puntajes" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable modal-sm" role="document">
-    <div class="modal-content">
+    <div class="modal-content" style="background-color: rgba(59, 134, 209, 0.9);border-radius: 0px">
       <div class="modal-header">
-        <h5 class="modal-title" id="puntajes">Modal title</h5>
+        <h5 class="modal-title evexnod-navbar-font" style="font-size: 28px" id="puntajes">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" style="background-color: rgba(146,154,176, 0.1); background-image: url('<?php echo base_url(); ?>assets/img/fondos/4.png');">
       	<?php for ($i=0; $i < 5; $i++) { ?>
       		<p><?php echo (isset($puntajes[$i])) ? $puntajes[$i]->puntaje.' '.$puntajes[$i]->nombre : ''; ?></p>
       	<?php } ?>

@@ -16,6 +16,15 @@ class Usuario_model extends CI_Model {
 		return $this->db->insert('compras', $data);
 	}
 
+	public function verificar_compra($juego, $usuario_id){
+		$this->db->select('compras.*');
+		$this->db->from('compras');
+		$this->db->where('usuario_id', $usuario_id);
+		$this->db->where('juego_id', $juego);
+		$consulta = $this->db->get();
+		return $consulta->row();
+	}
+
 	public function obtener_puntajes(){
 		$this->db->select('puntajes.puntaje, usuarios.nombre');
 		$this->db->from('puntajes');

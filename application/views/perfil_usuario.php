@@ -4,11 +4,30 @@
 	}
 </style>
 
+<script>
+	$(document).ready(function(){
+		var intervalo = setInterval(function(){
+		    $("#a_premium").fadeOut();
+		    $("#a_premium").fadeOut("slow");
+		    $("a_premium").fadeOut(3000);
+		    $("#a_premium").fadeIn();
+		    $("#a_premium").fadeIn("slow");
+		    $("a_premium").fadeIn(3000);
+		}, 1000);
+  });
+</script>
+
 <div class="row"style="background-color: rgba(59, 134, 209, 0.5);height:350px;margin:0px">
 	<div class="col-sm-4 text-center evexnod-navbar-font">
 		<img style="margin-top: -15px;border: solid 1px grey;"src="https://dummyimage.com/256x256/000/3b86d1" alt="...">
-		<h3 style="color:white">nombre_usuario</h3>
-		<h3 style="color:white">premium(si/no)</h3>
+		<?php if(isset($id)) { ?>
+		<h3 style="color:white; text-transform: uppercase"><?php echo $nombre; ?></h3>
+		<?php if ($premium == 1) {?>
+              <h3 style="color:white" id="a_premium">USUARIO PREMIUM</h3>
+            <?php }else{ ?>
+             <h3 style="color:white">Usuario no premium</h3>
+           <?php } ?>
+		
 <!-- 		<div class="d-lg-none text-center" style="width: 100%">
 			<button type="button" class="btn btn-outline-light" style="position: absolute;margin-top: 5px;margin-left: -85px" ><i class="fas fa-pen-square"></i>Editar pérfil</button>
 		</div> -->
@@ -154,6 +173,7 @@
 					<a class="btn btn-xs btn-outline-dark" href="" style="padding: 4px"><i class="fas fa-shopping-cart"></i> Ir a la Tienda</a>
 				</div>
 			</div>
+		<?php } ?>
 
 
 		</div>

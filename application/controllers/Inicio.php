@@ -28,7 +28,8 @@ class Inicio extends CI_Controller {
 
 	public function perfil_usuario()
 	{
-		$this->load->view('header');
+		$userdata = $this->session->userdata();
+		$this->load->view('header', $userdata);
 		$this->load->view('navbar2');
 		$this->load->view('inicio2');
 		$this->load->view('perfil_usuario');
@@ -67,10 +68,18 @@ class Inicio extends CI_Controller {
 
 	public function tienda($id)
 	{
+		$usuario_id = $this->session->userdata('id');
+		$consulta = $this->usuario_model->verificar_compra($id, $usuario_id);
+		// $tiene_juego = 0;
+		// if ($consulta) {
+		// 	$tiene_juego = 1;
+		// }
+		print_r($consulta);
+		$data = array('tiene_juego' => ($consulta) ? 1 : 0 );
 		$this->load->view('header', $this->session->userdata());
 		$this->load->view('navbar2');
 		$this->load->view('store_carousel');
-		$this->load->view('store_juego');
+		$this->load->view('store_juego', $data);
 		$this->load->view('inicio2');
 		$this->load->view('store_header');
 		// $this->load->view('store_final');
@@ -80,14 +89,30 @@ class Inicio extends CI_Controller {
 	}
 
 	public function juego()
-	{
+	{	
+		$id = $this->session->userdata('id');
+		$premium = $this->session->userdata('premium');
+		if (!$id) {
+			$this->load->view('header', $this->session->userdata());
+			$this->load->view('navbar2');
+			$this->load->view('error_sesion');
+			$this->load->view('footer2');		
+		}else if($premium == 0){
+			$this->load->view('header', $this->session->userdata());
+			$this->load->view('navbar2');
+			$this->load->view('error_premium');
+			$this->load->view('footer2');
+		}else{
 
-		$lista_puntajes = $this->usuario_model->obtener_puntajes();
-		$data = array('puntajes' => $lista_puntajes);
-		$this->load->view('header', $this->session->userdata());
-		$this->load->view('navbar2');
-		$this->load->view('game', $data);
-		$this->load->view('footer2');
+			$lista_puntajes = $this->usuario_model->obtener_puntajes();
+			$data = array('puntajes' => $lista_puntajes);
+			$this->load->view('header', $this->session->userdata());
+			$this->load->view('navbar2');
+			$this->load->view('game', $data);
+			$this->load->view('footer2');
+		}
+
+		
 	}
 
 	public function mostrar_registro()
@@ -218,23 +243,25 @@ class Inicio extends CI_Controller {
 	public function comprar_juego($id){
 
 		$creditos = $this->session->userdata('creditos');
-		$juego_id = $this->uri->segment(3);
+		$juego_id = $id;
 		$precio = $this->input->post('precio');
 		$usuario_id = $this->session->userdata('id');
+
 		if($creditos >= $precio){
 			$data = array('juego_id' => $juego_id, 'usuario_id' => $usuario_id);
 			$this->usuario_model->alta_compras($data);
-			redirect('inicio/juego'.'/'.$juego_id);
+			$data = array('creditos' => $creditos -$precio);
+			$this->usuario_model->modifica($data, $usuario_id);
+			$usuario_actualizado = $this->usuario_model->verificar('id', $usuario_id);
+			$this->session->set_userdata('creditos', $usuario_actualizado->creditos);
+			$this->session->set_userdata('success', "Compra realizada con éxito");
+			redirect('inicio/tienda'.'/'.$juego_id);
 		}else{
 			$this->session->set_userdata('error', "Monedas insuficientes");
-			redirect('inicio/juego'.'/'.$juego_id);
+			redirect('inicio/tienda'.'/'.$juego_id);
 		}
 	}
 
-	public function mostrar_tienda()
-	{
-
-	}
 
 	public function guardar_puntaje(){
 		$puntaje = $this->input->post('puntaje');
