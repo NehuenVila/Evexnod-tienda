@@ -181,10 +181,10 @@
             <a class="nav-link dropdown-toggle active evexnod-navbar-font" href="#" id="navbardrop" data-toggle="dropdown">JUEGOS</a>
             <div class="dropdown-menu">
               <a class="dropdown-item evexnod-navbar-font" href="<?php echo base_url()?>./inicio/tienda/1"><i class="fas fa-chess-rook"></i> BATTLE OF DUNGEON</a>
-              <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fab fa-fort-awesome"></i> DEFENSE OF TWEDJEN TOWER</a>
-              <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-globe-americas"></i> RHAN'S JOURNEY</a>
-              <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-user-astronaut"></i> OPERATION RECONQUEST</a>
-              <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fas fa-rocket"></i> ENDLESS ASTEROIDS</a>
+              <a class="dropdown-item evexnod-navbar-font" href="<?php echo base_url()?>./inicio/tienda/2"><i class="fab fa-fort-awesome"></i> DEFENSE OF TWEDJEN TOWER</a>
+              <a class="dropdown-item evexnod-navbar-font" href="<?php echo base_url()?>./inicio/tienda/3"><i class="fas fa-globe-americas"></i> RHAN'S JOURNEY</a>
+              <a class="dropdown-item evexnod-navbar-font" href="<?php echo base_url()?>./inicio/tienda/4"><i class="fas fa-user-astronaut"></i> OPERATION RECONQUEST</a>
+              <a class="dropdown-item evexnod-navbar-font" href="<?php echo base_url()?>./inicio/tienda/5"><i class="fas fa-rocket"></i> ENDLESS ASTEROIDS</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fab fa-js-square"></i> El Javascript xd</a>
               

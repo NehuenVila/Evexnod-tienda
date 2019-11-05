@@ -69,23 +69,75 @@ class Inicio extends CI_Controller {
 	public function tienda($id)
 	{
 		$usuario_id = $this->session->userdata('id');
-		$consulta = $this->usuario_model->verificar_compra($id, $usuario_id);
-		// $tiene_juego = 0;
-		// if ($consulta) {
-		// 	$tiene_juego = 1;
-		// }
-		print_r($consulta);
-		$data = array('tiene_juego' => ($consulta) ? 1 : 0 );
-		$this->load->view('header', $this->session->userdata());
-		$this->load->view('navbar2');
-		$this->load->view('store_carousel');
-		$this->load->view('store_juego', $data);
-		$this->load->view('inicio2');
-		$this->load->view('store_header');
-		// $this->load->view('store_final');
-		$this->load->view('store_desc');
+		if ($this->uri->segment(3) == 1){
+			$consulta = $this->usuario_model->verificar_compra($id, $usuario_id);
+			$data = array('tiene_juego' => ($consulta) ? 1 : 0 );
+			$this->load->view('header', $this->session->userdata());
+			$this->load->view('navbar2');
+			$this->load->view('juego1BD/store_carousel');
+			$this->load->view('juego1BD/store_juego', $data);
+			$this->load->view('inicio2');
+			$this->load->view('juego1BD/store_header');
+			$this->load->view('juego1BD/store_desc');
+			$this->load->view('footer2');
 
-		$this->load->view('footer2');
+		}else if ($this->uri->segment(3) == 2) {
+			$consulta = $this->usuario_model->verificar_compra($id, $usuario_id);
+			$data = array('tiene_juego' => ($consulta) ? 1 : 0 );
+			$this->load->view('header', $this->session->userdata());
+			$this->load->view('navbar2');
+			$this->load->view('juego2TT/store_carousel');
+			$this->load->view('juego2TT/store_juego', $data);
+			$this->load->view('inicio2');
+			$this->load->view('juego2TT/store_header');
+			$this->load->view('juego2TT/store_desc');
+			$this->load->view('footer2');
+
+
+		}else if ($this->uri->segment(3) == 3) {
+			$consulta = $this->usuario_model->verificar_compra($id, $usuario_id);
+			$data = array('tiene_juego' => ($consulta) ? 1 : 0 );
+			$this->load->view('header', $this->session->userdata());
+			$this->load->view('navbar2');
+			$this->load->view('juego3OR/store_carousel');
+			$this->load->view('juego3OR/store_juego', $data);
+			$this->load->view('inicio2');
+			$this->load->view('juego3OR/store_header');
+			$this->load->view('juego3OR/store_desc');
+			$this->load->view('footer2');
+
+
+		}else if ($this->uri->segment(3) == 4) {
+
+			$consulta = $this->usuario_model->verificar_compra($id, $usuario_id);
+			$data = array('tiene_juego' => ($consulta) ? 1 : 0 );
+			$this->load->view('header', $this->session->userdata());
+			$this->load->view('navbar2');
+			$this->load->view('juego4RJ/store_carousel');
+			$this->load->view('juego4RJ/store_juego', $data);
+			$this->load->view('inicio2');
+			$this->load->view('juego4RJ/store_header');
+			$this->load->view('juego4RJ/store_desc');
+			$this->load->view('footer2');
+
+
+		}else if ($this->uri->segment(3) == 5) {
+			$consulta = $this->usuario_model->verificar_compra($id, $usuario_id);
+			$data = array('tiene_juego' => ($consulta) ? 1 : 0 );
+			$this->load->view('header', $this->session->userdata());
+			$this->load->view('navbar2');
+			$this->load->view('juego5EA/store_carousel');
+			$this->load->view('juego5EA/store_juego', $data);
+			$this->load->view('inicio2');
+			$this->load->view('juego5EA/store_header');
+			$this->load->view('juego5EA/store_desc');
+			$this->load->view('footer2');
+
+		}else{
+			echo "error";
+		}
+
+		
 	}
 
 	public function juego()

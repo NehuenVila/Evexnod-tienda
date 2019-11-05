@@ -56,9 +56,9 @@
 			<div class="row" style="height: 33%">
 				<div class="col-sm-12 text-center">
 					<h2 class="evexnod-navbar-font h5-m" style="font-size: 24px">nombre_del_juego_1</h2>
-					<h5 class="evexnod-navbar-font h5-m">Horas Jugadas: <span id="hs1">000</span></h5>
-					<h5 class="evexnod-navbar-font h5-m">Logros Desbloqueados: <span id="l1">00</span>/<span id="l1b">00</span></h5>
-					<h5 class="evexnod-navbar-font h5-m">Desafios Completados: <span id="d1">00</span>/<span id="d1b">00</span></h5>
+					<h5 class="evexnod-navbar-font h5-m">Horas Jugadas: <span id="hs1">20</span></h5>
+					<h5 class="evexnod-navbar-font h5-m">Logros Desbloqueados: <span id="l1">15</span>/<span id="l1b">00</span></h5>
+					<h5 class="evexnod-navbar-font h5-m">Desafios Completados: <span id="d1">2</span>/<span id="d1b">00</span></h5>
 					<a class="btn btn-xs btn-outline-dark" href="" style="padding: 4px"><i class="fas fa-shopping-cart"></i> Ir a la Tienda</a>
 				</div>
 			</div>
@@ -66,9 +66,9 @@
 			<div class="row" style="height: 33%">
 				<div class="col-sm-12 text-center">
 					<h2 class="evexnod-navbar-font h5-m" style="font-size: 24px">nombre_del_juego_2</h2>
-					<h5 class="evexnod-navbar-font h5-m">Horas Jugadas: <span id="hs2">000</span></h5>
-					<h5 class="evexnod-navbar-font h5-m">Logros Desbloqueados: <span id="l2">00</span>/<span id="l2b">00</span></h5>
-					<h5 class="evexnod-navbar-font h5-m">Desafios Completados: <span id="d2">00</span>/<span id="d2b">00</span></h5>
+					<h5 class="evexnod-navbar-font h5-m">Horas Jugadas: <span id="hs2">8</span></h5>
+					<h5 class="evexnod-navbar-font h5-m">Logros Desbloqueados: <span id="l2">20</span>/<span id="l2b">00</span></h5>
+					<h5 class="evexnod-navbar-font h5-m">Desafios Completados: <span id="d2">12</span>/<span id="d2b">00</span></h5>
 					<a class="btn btn-xs btn-outline-dark" href="" style="padding: 4px"><i class="fas fa-shopping-cart"></i> Ir a la Tienda</a>
 				</div>
 			</div>
@@ -76,9 +76,9 @@
 			<div class="row" style="height: 33%">
 				<div class="col-sm-12 text-center">
 					<h2 class="evexnod-navbar-font h5-m" style="font-size: 24px">nombre_del_juego_3</h2>
-					<h5 class="evexnod-navbar-font h5-m">Horas Jugadas: <span id="hs3">000</span></h5>
-					<h5 class="evexnod-navbar-font h5-m">Logros Desbloqueados: <span id="l3">00</span>/<span id="l3b">00</span></h5>
-					<h5 class="evexnod-navbar-font h5-m">Desafios Completados: <span id="d3">00</span>/<span id="d3b">00</span></h5>
+					<h5 class="evexnod-navbar-font h5-m">Horas Jugadas: <span id="hs3">30</span></h5>
+					<h5 class="evexnod-navbar-font h5-m">Logros Desbloqueados: <span id="l3">120</span>/<span id="l3b">00</span></h5>
+					<h5 class="evexnod-navbar-font h5-m">Desafios Completados: <span id="d3">55</span>/<span id="d3b">00</span></h5>
 					<a class="btn btn-xs btn-outline-dark" href="" style="padding: 4px"><i class="fas fa-shopping-cart"></i> Ir a la Tienda</a>
 				</div>
 			</div>
