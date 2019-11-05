@@ -162,7 +162,7 @@ class Inicio extends CI_Controller {
 			$data = array('puntajes' => $lista_puntajes);
 			$this->load->view('header', $this->session->userdata());
 			$this->load->view('navbar2');
-			$this->load->view('game', $data);
+			$this->load->view('juegojs', $data);
 			$this->load->view('footer2');
 		}
 

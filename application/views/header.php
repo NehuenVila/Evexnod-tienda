@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Login</title>
+	<title>Evexnod</title>
+	<link rel="shortcut icon" href="<?php echo base_url()?>assets/img/evexnod_logo.png">
 	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Farro&display=swap" rel="stylesheet">

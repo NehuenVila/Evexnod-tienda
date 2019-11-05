@@ -1,21 +1,21 @@
 	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="https://dummyimage.com/1920x1080/000/3b86d1" class="d-block w-100" alt="...">
+				<img src="<?php echo base_url()?>assets/img/3/a.png" class="d-block w-100" alt="...">
 				<!-- <div class="carousel-caption d-none d-md-block"style="width: 100%;right: 0% !important;left: 0% !important">
 					<h5>Titulo Juego</h5>
 					<p>Descripcion Juego</p>
 				</div> -->
 			</div>
 			<div class="carousel-item">
-				<img src="https://dummyimage.com/1920x1080/000/3b86d1" class="d-block w-100" alt="...">
+				<img src="<?php echo base_url()?>assets/img/3/b.png" class="d-block w-100" alt="...">
 				<!-- <div class="carousel-caption d-none d-md-block"style="width: 100%;right: 0% !important;left: 0% !important">
 					<h5>Titulo Juego</h5>
 					<p>Descripcion Juego</p>
 				</div> -->
 			</div>
 			<div class="carousel-item">
-				<img src="https://dummyimage.com/1920x1080/000/3b86d1" class="d-block w-100" alt="...">
+				<img src="<?php echo base_url()?>assets/img/3/c.png" class="d-block w-100" alt="...">
 				<!-- <div class="carousel-caption d-none d-md-block"style="width: 100%;right: 0% !important;left: 0% !important">
 					<h5>Titulo Juego</h5>
 					<p>Descripcion Juego</p>

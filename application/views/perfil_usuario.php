@@ -97,15 +97,15 @@
 						</div>
 						<div class="col-sm-4 text-center expositor" style="background-color: rgb(59, 134, 209);border: 2px lightgrey dashed">
 							<h2 class="evexnod-navbar-font h5-m" style="font-size: 24px"><?php if($juego->juego_id == 1) {?>Battle of Dungeon
-								<?php }else if($juego->juego_id == 2) { ?>TT
-								<?php }else if($juego->juego_id == 3) { ?> RO
-								<?php }else if($juego->juego_id == 4) { ?> OP
-								<?php }else if($juego->juego_id == 2) { ?> end
+								<?php }else if($juego->juego_id == 2) { ?>Defense of Twedjen Tower
+								<?php }else if($juego->juego_id == 3) { ?> Rhan's Journey
+								<?php }else if($juego->juego_id == 4) { ?> Operation: Reconquest
+								<?php }else if($juego->juego_id == 5) { ?> Endless Asteroids
 							<?php } ?>
 							</h2>
-							<h5 class="evexnod-navbar-font h5-m">Horas Jugadas: <span id="hs1">000</span></h5>
-							<h5 class="evexnod-navbar-font h5-m">Logros Desbloqueados: <span id="l1">00</span>/<span id="l1b">00</span></h5>
-							<h5 class="evexnod-navbar-font h5-m">Desafios Completados: <span id="d1">00</span>/<span id="d1b">00</span></h5>
+							<h5 class="evexnod-navbar-font h5-m">Horas Jugadas: <span id="hs1">34</span></h5>
+							<h5 class="evexnod-navbar-font h5-m">Logros Desbloqueados: <span id="l1">20</span>/<span id="l1b">434</span></h5>
+							<h5 class="evexnod-navbar-font h5-m">Desafios Completados: <span id="d1">41</span>/<span id="d1b">41</span></h5>
 							<a class="btn btn-xs btn-outline-dark" href="" style="padding: 4px"><i class="fas fa-shopping-cart"></i> Ir a la Tienda</a>
 						</div>
 					</div>

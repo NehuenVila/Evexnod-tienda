@@ -150,7 +150,7 @@
         if ($('#alerta').length > 0){
           setTimeout(function(){
             ocultarAlerta();
-          }, 4500);
+          }, 2000);
         }
       });
 
