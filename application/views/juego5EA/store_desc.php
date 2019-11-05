@@ -9,7 +9,7 @@
 	<div class="col-sm-4 text-center" style="background-color: ">
 
 		<h5 class="evexnod-expositor-font" style="color:white;font-size: 24px"> <span><i class="fas fa-newspaper"></i></span>Contenido</h5>
-		<p style="color:white"> DXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p> agregar más texto aca
+		<p style="color:white"></p> agregar más texto aca
 		
 	</div>
 	<div class="col-sm-4 text-center" style="background-color: ">

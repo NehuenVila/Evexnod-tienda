@@ -2,19 +2,19 @@
 
 	<div class="col-sm-4 text-center" style="">
 		
-		<h5 class="evexnod-expositor-font" style="color:white;font-size: 24px"> <span><i class="fas fa-newspaper"></i></span>Arma tu estrategia</h5>
-		<p style="color:white">Selecciona una de las tres grandes razas para defender tus tesoros, Elfos, Enanos y Magos. Cada uno cuenta con 3 torres exclusivas y 3 mejoras para cada una</p>
+		<h5 class="evexnod-expositor-font" style="color:white;font-size: 24px"> <span><i class="fas fa-newspaper"></i></span>Resuelve rompecabezas</h5>
+		<p style="color:white">Descubre como resolver los rompecabezas de cada planeta de forma copertativa con 2 jugadores</p>
 
 	</div>	
 	<div class="col-sm-4 text-center" style="background-color: ">
 
 		<h5 class="evexnod-expositor-font" style="color:white;font-size: 24px"> <span><i class="fas fa-newspaper"></i></span>Contenido</h5>
-		<p style="color:white"> Mas de 15 niveles, desafios y distintas dificultades para que tu divercion nunca se termine</p> agregar más texto aca
+		<p style="color:white">Mas de 20 planetas, desafios y distintas dificultades para que tu divercion nunca se termine</p>
 		
 	</div>
 	<div class="col-sm-4 text-center" style="background-color: ">
 
-		<h5 class="evexnod-expositor-font" style="color:white;font-size: 24px"> <span><i class="fas fa-newspaper"></i></span>Contenido academico</h5>
+		<h5 class="evexnod-expositor-font" style="color:white;font-size: 24px"> <span><i class="fas fa-newspaper"></i></span>Universitario</h5>
 		<p style="color:white">Todo el juego esta hecho por el alumno durante el periodo de clases y sera presentado como proyecto final en la ULP</p>
 		
 	</div>

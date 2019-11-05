@@ -16,6 +16,14 @@ class Usuario_model extends CI_Model {
 		return $this->db->insert('compras', $data);
 	}
 
+	public function obtener_juegos($usuario_id){
+		$this->db->select('compras.*');
+		$this->db->from('compras');
+		$this->db->where('usuario_id', $usuario_id);
+		$consulta = $this->db->get();
+		return $consulta->result();
+	}
+
 	public function verificar_compra($juego, $usuario_id){
 		$this->db->select('compras.*');
 		$this->db->from('compras');

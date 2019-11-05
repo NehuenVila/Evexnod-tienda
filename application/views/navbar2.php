@@ -186,7 +186,7 @@
               <a class="dropdown-item evexnod-navbar-font" href="<?php echo base_url()?>./inicio/tienda/4"><i class="fas fa-user-astronaut"></i> OPERATION RECONQUEST</a>
               <a class="dropdown-item evexnod-navbar-font" href="<?php echo base_url()?>./inicio/tienda/5"><i class="fas fa-rocket"></i> ENDLESS ASTEROIDS</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item evexnod-navbar-font" href="#"><i class="fab fa-js-square"></i> El Javascript xd</a>
+              <a class="dropdown-item evexnod-navbar-font" href="<?php echo base_url()?>./inicio/juego"><i class="fab fa-js-square"></i>JS Summoner</a>
               
             </div>
           </li>

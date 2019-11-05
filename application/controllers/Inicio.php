@@ -28,11 +28,13 @@ class Inicio extends CI_Controller {
 
 	public function perfil_usuario()
 	{
+		$consulta = $this->usuario_model->obtener_juegos($this->session->userdata('id'));
+		$juegos = array('juegos' => $consulta);
 		$userdata = $this->session->userdata();
 		$this->load->view('header', $userdata);
 		$this->load->view('navbar2');
 		$this->load->view('inicio2');
-		$this->load->view('perfil_usuario');
+		$this->load->view('perfil_usuario', $juegos);
 
 		$this->load->view('footer2');
 	}

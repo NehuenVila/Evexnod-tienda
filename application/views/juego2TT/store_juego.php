@@ -83,7 +83,7 @@
 				</div>
 				<!-- <div class="modal-body" style="background-color: rgba(146,154,176, 0.1)"> -->
 					<div class="modal-body" style="background-color: rgba(146,154,176, 0.1); background-image: url('<?php echo base_url(); ?>assets/img/fondos/4.png');">
-						<h5 style="color: rgba(255,255,255,0.8)">NOMBRE_EDICION: <span><span style="float:right"class="badge badge-light">$ 0.000,00</span></span></h5>
+						<h5 style="color: rgba(255,255,255,0.8)">NOMBRE_EDICION: <span><span style="float:right"class="badge badge-light">$ 600</span></span></h5>
 						<p style=" color: rgba(255,255,255,0.8)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione illo eum tempore dolorem eaque fugiat incidunt iusto minima rem eveniet aliquid similique quis laudantium consectetur, officia, ex et distinctio perspiciatis?</p>
 					</div>
 					<div class="modal-footer">

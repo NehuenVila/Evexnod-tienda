@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-sm-1"></div>
 			<div class="col-sm-10 text-center" style="background-color: transparent;">
-				<p class="evexnod-navbar-font" style="font-size: 28px"><span>Battle of Dungeon</span> es un juego de Estrategia<span>Tower Defense</span> <span>2D</span> <span> Arma ti propia estrategia para poder superar los distintos niveles del juego</span></p>
+				<p class="evexnod-navbar-font" style="font-size: 28px"><span>Operation Reconquest</span> es un juego de rompecabezas<span>Puzzle</span> <span>3D</span> <span>encuentra la forma con tu amigo para resolver cada rompecabezas</span></p>
 			</div>
 			<div class="col-sm-1"></div>
 		</div>
